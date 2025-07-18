@@ -10,7 +10,9 @@
         android:name="com.ila.ui.home.HomeFragment"
         android:label="@string/title_home"
         tools:layout="@layout/fragment_home" />
-
+    <action
+        android:id="@+id/action_Home_to_Dashboard"
+        app:destination="@id/navigation_dashboard"/>
     <fragment
         android:id="@+id/navigation_dashboard"
         android:name="com.ila.ui.dashboard.DashboardFragment"
