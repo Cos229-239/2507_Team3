@@ -9,7 +9,11 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
 
+import android.widget.Button;
+import com.ila.R;
 import com.ila.databinding.FragmentHomeBinding;
 
 public class HomeFragment extends Fragment {
@@ -26,7 +30,21 @@ public class HomeFragment extends Fragment {
 
         final TextView textView = binding.textHome;
         homeViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
-        return root;
+
+
+        Button N_Button = binding.button3;
+        N_Button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                N_ButtonClicked();
+            }
+
+    });
+        return root;}
+
+    public void N_ButtonClicked() {
+        NavController navController = Navigation.findNavController(requireActivity(), R.id.nav_host_fragment_activity_main);
+        navController.navigate(R.id.action_Home_to_Notifications);
     }
 
     @Override
