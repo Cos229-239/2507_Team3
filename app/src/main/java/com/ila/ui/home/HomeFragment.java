@@ -4,12 +4,17 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
 
+
+import com.ila.R;
 import com.ila.databinding.FragmentHomeBinding;
 
 public class HomeFragment extends Fragment {
@@ -24,9 +29,23 @@ public class HomeFragment extends Fragment {
         binding = FragmentHomeBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
+
         final TextView textView = binding.textHome;
         homeViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
+
+        Button briButton = binding.button2;
+        briButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                briButtonClicked();
+            }
+        });
         return root;
+    }
+
+    public void briButtonClicked() {
+        NavController navController = Navigation.findNavController(requireActivity(), R.id.nav_host_fragment_activity_main);
+        navController.navigate(R.id.action_Home_to_Dashboard);
     }
 
     @Override
