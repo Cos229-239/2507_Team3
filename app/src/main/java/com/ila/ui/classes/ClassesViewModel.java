@@ -1,16 +1,16 @@
-package com.ila.ui.classselection;
+package com.ila.ui.classes;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class ClassSelectionViewModel extends ViewModel {
+public class ClassesViewModel extends ViewModel {
 
     private final MutableLiveData<String> mText;
 
-    public ClassSelectionViewModel() {
+    public ClassesViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("DashBoard");
+        mText.setValue("Classes");
     }
 
     public LiveData<String> getText() {

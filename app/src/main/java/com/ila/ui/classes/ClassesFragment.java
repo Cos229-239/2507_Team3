@@ -1,4 +1,4 @@
-package com.ila.ui.classselection;
+package com.ila.ui.classes;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -10,21 +10,21 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.ila.databinding.FragmentClassSelectionBinding;
+import com.ila.databinding.FragmentClassesBinding;
 
-public class ClassSelectionFragment extends Fragment {
+public class ClassesFragment extends Fragment {
 
-    private FragmentClassSelectionBinding binding;
+    private FragmentClassesBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        ClassSelectionViewModel classSelectionViewModel =
-                new ViewModelProvider(this).get(ClassSelectionViewModel.class);
+        ClassesViewModel classSelectionViewModel =
+                new ViewModelProvider(this).get(ClassesViewModel.class);
 
-        binding = FragmentClassSelectionBinding.inflate(inflater, container, false);
+        binding = FragmentClassesBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final TextView textView = binding.textClassSelection;
+        final TextView textView = binding.textClasses;
         classSelectionViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
         return root;
     }
