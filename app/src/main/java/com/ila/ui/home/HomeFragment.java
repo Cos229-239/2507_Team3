@@ -31,25 +31,29 @@ public class HomeFragment extends Fragment {
         final TextView textView = binding.textHome;
         homeViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
 
-    Button BriButton = binding.buttonBri;
-    BriButton.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            ButtonClicked(0);
-        }
-    });
-    Button AndButton = binding.buttonAnd;
-    AndButton.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            ButtonClicked(1);
-        }
-    });
-    Button not_button = binding.notButton;
-    not_button.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {ButtonClicked(2);}
-    });
+        Button BriButton = binding.buttonBri;
+        BriButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ButtonClicked(0);
+            }
+        });
+
+        Button AndButton = binding.buttonAnd;
+        AndButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ButtonClicked(1);
+            }
+        });
+
+        Button not_button = binding.notButton;
+        not_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ButtonClicked(2);
+            }
+        });
 
         return root;
     }
@@ -62,8 +66,10 @@ public class HomeFragment extends Fragment {
                 break;
             case 1:
                 navController.navigate(R.id.action_Home_to_Settings);
+                break;
             case 2:
                 navController.navigate(R.id.action_Home_to_Notifications);
+                break;
             default:
                 return;
         }

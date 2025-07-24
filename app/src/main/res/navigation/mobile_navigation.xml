@@ -13,9 +13,7 @@
     <action
         android:id="@+id/action_Home_to_Dashboard"
         app:destination="@id/navigation_dashboard"/>
-    <action
-        android:id="@+id/action_Home_to_Notifications"
-        app:destination="@id/navigation_notifications"/>
+
     <fragment
         android:id="@+id/navigation_dashboard"
         android:name="com.ila.ui.dashboard.DashboardFragment"
@@ -26,6 +24,9 @@
         android:name="com.ila.ui.notifications.NotificationsFragment"
         android:label="@string/title_notifications"
         tools:layout="@layout/fragment_notifications" />
+    <action
+        android:id="@+id/action_Home_to_Notifications"
+        app:destination="@id/navigation_notifications"/>
     <fragment
         android:id="@+id/navigation_Settings"
         android:name="com.ila.ui.settings.SettingsFragment"
