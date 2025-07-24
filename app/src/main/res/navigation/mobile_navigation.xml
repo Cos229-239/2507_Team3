@@ -27,7 +27,7 @@
         android:id="@+id/navigation_Settings"
         android:name="com.ila.ui.settings.SettingsFragment"
         android:label="@string/title_Settings"
-        tools:layout="@layout/fragment_Settings"/>
+        tools:layout="@layout/fragment_settings"/>
     <action
         android:id="@+id/action_Home_to_Settings"
         app:destination="@+id/navigation_Settings"/>
