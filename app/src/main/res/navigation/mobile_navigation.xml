@@ -31,4 +31,7 @@
     <action
         android:id="@+id/action_Home_to_Settings"
         app:destination="@+id/navigation_Settings"/>
+    <action
+        android:id="@+id/action_to_Home"
+        app:destination="@+id/navigation_home"/>
 </navigation>
