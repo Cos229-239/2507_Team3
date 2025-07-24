@@ -5,7 +5,7 @@
     <string name="title_notifications">Notifications</string>
     <string name="title_Settings">Settings</string>
     <string name="homeButton">Home</string>
-    <string name="dashboardButton">Dashboard</string>
+    <string name="readingButton">Reading</string>
     <string name="settingsButton">Settings</string>
     <string name="notificationsButton">Notifications</string>
 </resources>
