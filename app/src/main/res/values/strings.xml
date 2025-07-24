@@ -8,4 +8,8 @@
     <string name="dashboardButton">Dashboard</string>
     <string name="settingsButton">Settings</string>
     <string name="notificationsButton">Notifications</string>
+    <string name="DarkModeButton">DarkMode</string>
+    <string name="TextToSpeechButton">TextToSpeech</string>
+    <string name="PlaceHolderButton">PlaceHolder</string>
+
 </resources>
