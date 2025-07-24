@@ -45,6 +45,12 @@ public class HomeFragment extends Fragment {
             ButtonClicked(1);
         }
     });
+    Button not_button = binding.notButton;
+    not_button.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {ButtonClicked(2);}
+    });
+
         return root;
     }
     public void ButtonClicked(int i)
@@ -56,6 +62,8 @@ public class HomeFragment extends Fragment {
                 break;
             case 1:
                 navController.navigate(R.id.action_Home_to_Settings);
+            case 2:
+                navController.navigate(R.id.action_Home_to_Notifications);
             default:
                 return;
         }
