@@ -18,10 +18,17 @@
         android:name="com.ila.ui.dashboard.DashboardFragment"
         android:label="@string/title_dashboard"
         tools:layout="@layout/fragment_dashboard" />
-
     <fragment
         android:id="@+id/navigation_notifications"
         android:name="com.ila.ui.notifications.NotificationsFragment"
         android:label="@string/title_notifications"
         tools:layout="@layout/fragment_notifications" />
+    <fragment
+        android:id="@+id/navigation_Settings"
+        android:name="com.ila.ui.settings.SettingsFragment"
+        android:label="@string/title_Settings"
+        tools:layout="@layout/fragment_Settings"/>
+    <action
+        android:id="@+id/action_Home_to_Settings"
+        app:destination="@+id/navigation_Settings"/>
 </navigation>

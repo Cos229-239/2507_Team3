@@ -4,12 +4,16 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
 
+import com.ila.R;
 import com.ila.databinding.FragmentHomeBinding;
 
 public class HomeFragment extends Fragment {
@@ -26,9 +30,37 @@ public class HomeFragment extends Fragment {
 
         final TextView textView = binding.textHome;
         homeViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
+
+    Button BriButton = binding.buttonBri;
+    BriButton.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            ButtonClicked(0);
+        }
+    });
+    Button AndButton = binding.buttonAnd;
+    AndButton.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            ButtonClicked(2);
+        }
+    });
         return root;
     }
+    public void ButtonClicked(int i)
+    {
+        NavController navController = Navigation.findNavController(requireActivity(), R.id.nav_host_fragment_activity_main);
+        switch (i) {
+            case 1:
+                navController.navigate(R.id.action_Home_to_Dashboard);
+                break;
+            case 2:
+                navController.navigate(R.id.action_Home_to_Settings);
+            default:
+                return;
+        }
 
+    }
     @Override
     public void onDestroyView() {
         super.onDestroyView();
