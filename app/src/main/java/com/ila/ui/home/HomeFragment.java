@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -39,7 +40,7 @@ public class HomeFragment extends Fragment {
             }
         });
 
-        Button AndButton = binding.buttonAnd;
+        ImageButton AndButton = binding.buttonSettings;
         AndButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -47,8 +48,8 @@ public class HomeFragment extends Fragment {
             }
         });
 
-        Button not_button = binding.notButton;
-        not_button.setOnClickListener(new View.OnClickListener() {
+        ImageButton notif_button = binding.buttonNotif;
+        notif_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 ButtonClicked(2);

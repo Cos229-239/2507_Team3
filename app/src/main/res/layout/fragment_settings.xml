@@ -8,86 +8,93 @@
 
     <ImageView
         android:id="@+id/banner_top"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:contentDescription="@string/PlaceHolderButton"
         android:src="@drawable/banner"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginStart="0dp"
-        android:layout_marginEnd="0dp"
-        android:layout_marginTop="0dp"
-        android:layout_marginBottom="800dp"
-        />
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/text_Settings"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginStart="0dp"
-        android:layout_marginEnd="0dp"
-        android:layout_marginTop="0dp"
-        android:layout_marginBottom="800dp" />
+        android:textColor="@color/teal_Light"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toBottomOf="@id/banner_top"
+        app:layout_constraintEnd_toEndOf="@id/banner_top"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@id/banner_top"
+        app:layout_constraintTop_toTopOf="@id/banner_top"
+        app:layout_constraintVertical_bias="0.5" />
 
-    <Button
-        android:id="@+id/buttonDarkMode"
-        android:layout_width="match_parent"
-        android:layout_height="105dp"
-        android:layout_marginStart="0dp"
-        android:layout_marginEnd="0dp"
-        android:layout_marginTop="125dp"
-        android:layout_marginBottom="685dp"
-        android:text="@string/DarkModeButton"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/buttonTextToSpeech"
-        android:layout_width="match_parent"
-        android:layout_height="105dp"
-        android:layout_marginStart="0dp"
-        android:layout_marginEnd="0dp"
-        android:layout_marginTop="235dp"
-        android:layout_marginBottom="570dp"
-        android:text="@string/TextToSpeechButton"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/button"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="105dp"
-        android:layout_marginStart="0dp"
-        android:layout_marginEnd="0dp"
-        android:layout_marginTop="345dp"
-        android:layout_marginBottom="455dp"
-        android:text="@string/PlaceHolderButton"
+        android:layout_height="match_parent"
+        android:layout_marginTop="120dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/banner_top">
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="match_parent"
-        android:layout_height="105dp"
-        android:layout_marginTop="460dp"
-        android:layout_marginBottom="340dp"
-        android:text="@string/PlaceHolderButton"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+        <Button
+            android:id="@+id/buttonDarkMode"
+            android:layout_width="match_parent"
+            android:layout_height="105dp"
+            android:text="@string/DarkModeButton"
+            android:padding="10dp"
+            />
+
+        <Button
+            android:id="@+id/buttonTextToSpeech"
+            android:layout_width="match_parent"
+            android:layout_height="105dp"
+            android:text="@string/TextToSpeechButton"
+            android:padding="10dp"/>
+
+        <Button
+            android:id="@+id/buttonPlaceHolder"
+            android:layout_width="match_parent"
+            android:layout_height="105dp"
+            android:text="@string/TextToSpeechButton"
+            android:padding="10dp" />
+            <Button
+                android:id="@+id/button0PlaceHolder"
+                android:layout_width="match_parent"
+                android:layout_height="105dp"
+                android:text="@string/TextToSpeechButton"
+                android:padding="10dp" />
+            <Button
+                android:id="@+id/button1PlaceHolder"
+                android:layout_width="match_parent"
+                android:layout_height="105dp"
+                android:text="@string/TextToSpeechButton"
+                android:padding="10dp" />
+            <Button
+                android:id="@+id/button2PlaceHolder"
+                android:layout_width="match_parent"
+                android:layout_height="105dp"
+                android:text="@string/TextToSpeechButton"
+                android:padding="10dp" />
+            <Button
+                android:id="@+id/button3PlaceHolder"
+                android:layout_width="match_parent"
+                android:layout_height="105dp"
+                android:text="@string/TextToSpeechButton"
+                android:padding="10dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
