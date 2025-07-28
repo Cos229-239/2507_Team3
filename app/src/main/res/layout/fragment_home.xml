@@ -7,20 +7,7 @@
     tools:context=".ui.home.HomeFragment">
 
 
-    <Button
-        android:id="@+id/buttonBri"
-        android:layout_width="144dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="55dp"
-        android:layout_marginTop="488dp"
-        android:layout_marginEnd="219dp"
-        android:layout_marginBottom="204dp"
-        android:onClick="ButtonClicked"
-        android:text="@string/readingButton"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+
 
     <ImageButton
         android:id="@+id/buttonSettings"
@@ -82,24 +69,25 @@
         app:layout_constraintTop_toTopOf="@id/imageBanner"
         app:layout_constraintVertical_bias="0.5"
         app:layout_constraintHorizontal_bias="0.5"/>
-
-    <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="1025dp"
-        android:layout_height="724dp"
-        android:src="@drawable/folders_no_text"
-        android:contentDescription="@null"
-        app:layout_constraintBottom_toBottomOf="@id/imageBackPackOpen"
-        app:layout_constraintEnd_toEndOf="@id/imageBackPackOpen"
-        app:layout_constraintStart_toStartOf="@id/imageBackPackOpen"
-        app:layout_constraintTop_toTopOf="@id/imageBackPackOpen"
-        app:layout_constraintVertical_bias="1.9"
-        app:layout_constraintHorizontal_bias="0.55"/>
-
+    <ImageButton
+        android:id="@+id/buttonBri"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="380dp"
+        android:onClick="ButtonClicked"
+        android:src="@drawable/folders_resized"
+        android:contentDescription="@string/readingButton"
+        android:background="@color/null_color"
+        app:layout_constraintBottom_toTopOf="@id/imageBackPackOpen"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0"
+        app:layout_constraintHorizontal_bias="0.5"/>
     <ImageView
         android:id="@+id/imageBackPackOpen"
-        android:layout_width="515dp"
-        android:layout_height="635dp"
+        android:layout_width="500dp"
+        android:layout_height="500dp"
         android:src="@drawable/backpack_fully_open"
         android:contentDescription="@null"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -110,80 +98,6 @@
         app:layout_constraintVertical_bias="1.5"
         />
 
-    <Button
-        android:id="@+id/button6"
-        android:layout_width="140dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="224dp"
-        android:layout_marginTop="450dp"
-        android:layout_marginEnd="47dp"
-        android:layout_marginBottom="246dp"
-        android:text="@string/PlaceHolderButton"
-        android:textColor="@color/null_color"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="140dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="55dp"
-        android:layout_marginTop="450dp"
-        android:layout_marginEnd="216dp"
-        android:layout_marginBottom="246dp"
-        android:text="@string/PlaceHolderButton"
-        android:textColor="@color/null_color"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="152dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="222dp"
-        android:layout_marginTop="414dp"
-        android:layout_marginEnd="37dp"
-        android:layout_marginBottom="281dp"
-        android:text="@string/PlaceHolderButton"
-        android:textColor="@color/null_color"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="155dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="46dp"
-        android:layout_marginTop="410dp"
-        android:layout_marginEnd="210dp"
-        android:layout_marginBottom="281dp"
-        android:text="@string/PlaceHolderButton"
-        android:textColor="@color/null_color"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/button5"
-        android:layout_width="149dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="224dp"
-        android:layout_marginTop="491dp"
-        android:layout_marginEnd="38dp"
-        android:layout_marginBottom="200dp"
-        android:text="@string/PlaceHolderButton"
-        android:textColor="@color/null_color"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

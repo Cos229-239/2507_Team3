@@ -73,25 +73,25 @@
                 android:id="@+id/button0PlaceHolder"
                 android:layout_width="match_parent"
                 android:layout_height="105dp"
-                android:text="@string/TextToSpeechButton"
+                android:text="@string/PlaceHolderButton"
                 android:padding="10dp" />
             <Button
                 android:id="@+id/button1PlaceHolder"
                 android:layout_width="match_parent"
                 android:layout_height="105dp"
-                android:text="@string/TextToSpeechButton"
+                android:text="@string/PlaceHolderButton"
                 android:padding="10dp" />
             <Button
                 android:id="@+id/button2PlaceHolder"
                 android:layout_width="match_parent"
                 android:layout_height="105dp"
-                android:text="@string/TextToSpeechButton"
+                android:text="@string/PlaceHolderButton"
                 android:padding="10dp" />
             <Button
                 android:id="@+id/button3PlaceHolder"
                 android:layout_width="match_parent"
                 android:layout_height="105dp"
-                android:text="@string/TextToSpeechButton"
+                android:text="@string/PlaceHolderButton"
                 android:padding="10dp" />
 
         </LinearLayout>
