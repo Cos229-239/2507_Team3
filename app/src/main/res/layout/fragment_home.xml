@@ -70,7 +70,7 @@
         app:layout_constraintVertical_bias="0.5"
         app:layout_constraintHorizontal_bias="0.5"/>
     <ImageButton
-        android:id="@+id/buttonBri"
+        android:id="@+id/buttonCourse"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="380dp"
@@ -78,24 +78,24 @@
         android:src="@drawable/folders_resized"
         android:contentDescription="@string/readingButton"
         android:background="@color/null_color"
-        app:layout_constraintBottom_toTopOf="@id/imageBackPackOpen"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0"
+        app:layout_constraintBottom_toBottomOf="@id/imageBackPackOpen"
+        app:layout_constraintEnd_toEndOf="@id/imageBackPackOpen"
+        app:layout_constraintStart_toStartOf="@id/imageBackPackOpen"
+        app:layout_constraintTop_toTopOf="@id/imageBackPackOpen"
+        app:layout_constraintVertical_bias="1.1"
         app:layout_constraintHorizontal_bias="0.5"/>
     <ImageView
         android:id="@+id/imageBackPackOpen"
-        android:layout_width="500dp"
-        android:layout_height="500dp"
+        android:layout_width="450dp"
+        android:layout_height="450dp"
         android:src="@drawable/backpack_fully_open"
         android:contentDescription="@null"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintHorizontal_bias="0.45"
-        app:layout_constraintVertical_bias="1.5"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintVertical_bias="1.2"
         />
 
 

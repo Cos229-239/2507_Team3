@@ -32,7 +32,7 @@ public class HomeFragment extends Fragment {
         final TextView textView = binding.textHome;
         homeViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
 
-        ImageButton BriButton = binding.buttonBri;
+        ImageButton BriButton = binding.buttonCourse;
         BriButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
