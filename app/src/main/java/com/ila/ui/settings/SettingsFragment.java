@@ -7,25 +7,27 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.Switch;
 import android.widget.TextView;
-
+import android.media.MediaPlayer;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.ila.databinding.FragmentSettingsBinding;
-import com.ila.ui.settings.SettingsViewModel;
-
+import com.ila.R;
 public class SettingsFragment extends Fragment {
 
+    MediaPlayer mediaPlayer;
     private FragmentSettingsBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         SettingsViewModel SettingsViewModel =
                 new ViewModelProvider(this).get(SettingsViewModel.class);
+
+        mediaPlayer = MediaPlayer.create(requireActivity(),R.raw.knocking);
+        mediaPlayer.stop();
 
         binding = FragmentSettingsBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
@@ -43,6 +45,7 @@ public class SettingsFragment extends Fragment {
     }
 
     public void ButtonClicked(int i) {
+        mediaPlayer.start();
         switch(i){
         case 0:
             Context context = this.getContext();
@@ -63,7 +66,7 @@ public class SettingsFragment extends Fragment {
         default:
             break;
     }
-
+        mediaPlayer.stop();
     }
     public boolean isNightMode(Context context) {
         int nightModeFlags = context.getResources().getConfiguration().uiMode & Configuration.UI_MODE_NIGHT_MASK;
