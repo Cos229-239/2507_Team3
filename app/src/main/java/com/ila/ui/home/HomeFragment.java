@@ -25,8 +25,7 @@ public class HomeFragment extends Fragment {
         HomeViewModel homeViewModel =
                 new ViewModelProvider(this).get(HomeViewModel.class);
 
-        mediaPlayer = MediaPlayer.create(requireActivity(),R.raw.knocking);
-        mediaPlayer.stop();
+        mediaPlayer = MediaPlayer.create(requireActivity(),R.raw.button_knock);
 
         binding = FragmentHomeBinding.inflate(inflater, container, false);
         View root = binding.getRoot();

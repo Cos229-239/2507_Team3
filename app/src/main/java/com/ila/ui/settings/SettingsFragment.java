@@ -27,8 +27,7 @@ public class SettingsFragment extends Fragment {
         SettingsViewModel SettingsViewModel =
                 new ViewModelProvider(this).get(SettingsViewModel.class);
 
-        mediaPlayer = MediaPlayer.create(requireActivity(),R.raw.knocking);
-        mediaPlayer.stop();
+        mediaPlayer = MediaPlayer.create(requireActivity(),R.raw.button_knock);
         mediaPlaceHolder = MediaPlayer.create(requireActivity(),R.raw.placeholder);
         binding = FragmentSettingsBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
