@@ -19,6 +19,7 @@ import com.ila.R;
 public class SettingsFragment extends Fragment {
 
     MediaPlayer mediaPlayer;
+    MediaPlayer mediaPlaceHolder;
     private FragmentSettingsBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -28,19 +29,14 @@ public class SettingsFragment extends Fragment {
 
         mediaPlayer = MediaPlayer.create(requireActivity(),R.raw.knocking);
         mediaPlayer.stop();
-
+        mediaPlaceHolder = MediaPlayer.create(requireActivity(),R.raw.placeholder);
         binding = FragmentSettingsBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
         final TextView textView = binding.textSettings;
         SettingsViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
         Button AndButton = binding.buttonDarkMode;
-        AndButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                ButtonClicked(0);
-            }
-        });
+        AndButton.setOnClickListener(v -> ButtonClicked(0));
         return root;
     }
 
@@ -49,21 +45,21 @@ public class SettingsFragment extends Fragment {
         switch(i){
         case 0:
             Context context = this.getContext();
+            if(context == null) return;
             if(isNightMode(context))
             {
                 AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
-                requireActivity().recreate();
             }
             else
             {
                 AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
-                requireActivity().recreate();
             }
+            requireActivity().recreate();
             break;
-
             case 1:
                 break;
         default:
+            mediaPlaceHolder.start();
             break;
     }
         mediaPlayer.stop();
@@ -74,6 +70,8 @@ public class SettingsFragment extends Fragment {
     }
     @Override
     public void onDestroyView() {
+        mediaPlaceHolder.release();
+        mediaPlayer.release();
         super.onDestroyView();
         binding = null;
     }

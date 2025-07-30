@@ -4,7 +4,6 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.media.MediaPlayer;
@@ -36,28 +35,13 @@ public class HomeFragment extends Fragment {
         homeViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
 
         ImageButton BriButton = binding.buttonCourse;
-        BriButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                ButtonClicked(0);
-            }
-        });
+        BriButton.setOnClickListener(v -> ButtonClicked(0));
 
         ImageButton AndButton = binding.buttonSettings;
-        AndButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                ButtonClicked(1);
-            }
-        });
+        AndButton.setOnClickListener(v -> ButtonClicked(1));
 
         ImageButton notif_button = binding.buttonNotif;
-        notif_button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                ButtonClicked(2);
-            }
-        });
+        notif_button.setOnClickListener(v -> ButtonClicked(2));
 
         return root;
     }
@@ -82,6 +66,7 @@ public class HomeFragment extends Fragment {
     }
     @Override
     public void onDestroyView() {
+        mediaPlayer.release();
         super.onDestroyView();
         binding = null;
     }
