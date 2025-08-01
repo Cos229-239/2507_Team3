@@ -48,27 +48,27 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-        <Button
-            android:id="@+id/buttonDarkMode"
-            android:layout_width="match_parent"
-            android:layout_height="105dp"
-            android:text="@string/DarkModeButton"
-            android:padding="10dp"
-            />
 
-        <Button
-            android:id="@+id/buttonTextToSpeech"
-            android:layout_width="match_parent"
-            android:layout_height="105dp"
-            android:text="@string/TextToSpeechButton"
-            android:padding="10dp"/>
+            <Button
+                android:id="@+id/buttonDarkMode"
+                android:layout_width="match_parent"
+                android:layout_height="105dp"
+                android:text="@string/DarkModeButton"
+                android:padding="10dp"/>
 
-        <Button
-            android:id="@+id/buttonPlaceHolder"
-            android:layout_width="match_parent"
-            android:layout_height="105dp"
-            android:text="@string/TextToSpeechButton"
-            android:padding="10dp" />
+            <Button
+                android:id="@+id/buttonTextToSpeech"
+                android:layout_width="match_parent"
+                android:layout_height="105dp"
+                android:text="@string/TextToSpeechButton"
+                android:padding="10dp"/>
+
+            <Button
+                android:id="@+id/buttonPlaceHolder"
+                android:layout_width="match_parent"
+                android:layout_height="105dp"
+                android:text="@string/TextToSpeechButton"
+                android:padding="10dp" />
             <Button
                 android:id="@+id/button0PlaceHolder"
                 android:layout_width="match_parent"

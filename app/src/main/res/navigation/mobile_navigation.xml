@@ -5,6 +5,7 @@
     android:id="@+id/mobile_navigation"
     app:startDestination="@+id/navigation_home">
 
+
     <fragment
         android:id="@+id/navigation_home"
         android:name="com.ila.ui.home.HomeFragment"
@@ -19,6 +20,14 @@
         android:name="com.ila.ui.classes.ClassesFragment"
         android:label="@string/title_classes"
         tools:layout="@layout/fragment_classes" />
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.ila.ui.profile.ProfileFragment"
+        android:label="@string/title_profile"
+        tools:layout="@layout/fragment_profile"/>
+    <action
+        android:id="@+id/action_Home_to_Profile"
+        app:destination="@+id/navigation_profile"/>
     <fragment
         android:id="@+id/navigation_notifications"
         android:name="com.ila.ui.notifications.NotificationsFragment"

@@ -36,11 +36,14 @@ public class HomeFragment extends Fragment {
         ImageButton BriButton = binding.buttonCourse;
         BriButton.setOnClickListener(v -> ButtonClicked(0));
 
-        ImageButton AndButton = binding.buttonSettings;
-        AndButton.setOnClickListener(v -> ButtonClicked(1));
+        ImageButton settings_button = binding.buttonSettings;
+        settings_button.setOnClickListener(v -> ButtonClicked(1));
 
         ImageButton notif_button = binding.buttonNotif;
         notif_button.setOnClickListener(v -> ButtonClicked(2));
+
+        ImageButton profile_button = binding.buttonProfile;
+        profile_button.setOnClickListener(v-> ButtonClicked(3));
 
         return root;
     }
@@ -58,6 +61,8 @@ public class HomeFragment extends Fragment {
             case 2:
                 navController.navigate(R.id.action_Home_to_Notifications);
                 break;
+            case 3:
+                navController.navigate(R.id.action_Home_to_Profile);
             default:
                 return;
         }
