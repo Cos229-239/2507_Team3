@@ -6,4 +6,6 @@
     <string name="homeButton">Home</string>
     <string name="dashboardButton">Dashboard</string>
     <string name="notificationsButton">Notifications</string>
+    <string name="banner">Banner image</string>
+    <string name="example_notification_text">Example notification: Your assignment is due tomorrow!</string>
 </resources>
