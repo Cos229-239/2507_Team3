@@ -10,7 +10,7 @@
         android:id="@+id/banner_top"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:contentDescription="@string/PlaceHolderButton"
+        android:contentDescription="@string/placeholderButton"
         android:src="@drawable/banner"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -54,45 +54,45 @@
                 android:id="@+id/buttonDarkMode"
                 android:layout_width="match_parent"
                 android:layout_height="105dp"
-                android:text="@string/DarkModeButton"
+                android:text="@string/darkModeButton"
                 android:padding="10dp" />
 
             <Button
                 android:id="@+id/buttonTextToSpeech"
                 android:layout_width="match_parent"
                 android:layout_height="105dp"
-                android:text="@string/TextToSpeechButton"
+                android:text="@string/textToSpeechButton"
                 android:padding="10dp"/>
 
             <Button
                 android:id="@+id/buttonPlaceHolder"
                 android:layout_width="match_parent"
                 android:layout_height="105dp"
-                android:text="@string/TextToSpeechButton"
+                android:text="@string/placeholderButton"
                 android:padding="10dp" />
             <Button
                 android:id="@+id/button0PlaceHolder"
                 android:layout_width="match_parent"
                 android:layout_height="105dp"
-                android:text="@string/PlaceHolderButton"
+                android:text="@string/placeholderButton"
                 android:padding="10dp" />
             <Button
                 android:id="@+id/button1PlaceHolder"
                 android:layout_width="match_parent"
                 android:layout_height="105dp"
-                android:text="@string/PlaceHolderButton"
+                android:text="@string/placeholderButton"
                 android:padding="10dp" />
             <Button
                 android:id="@+id/button2PlaceHolder"
                 android:layout_width="match_parent"
                 android:layout_height="105dp"
-                android:text="@string/PlaceHolderButton"
+                android:text="@string/placeholderButton"
                 android:padding="10dp" />
             <Button
                 android:id="@+id/button3PlaceHolder"
                 android:layout_width="match_parent"
                 android:layout_height="105dp"
-                android:text="@string/PlaceHolderButton"
+                android:text="@string/placeholderButton"
                 android:padding="10dp" />
 
         </LinearLayout>
