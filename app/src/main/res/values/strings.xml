@@ -1,10 +1,9 @@
 <resources>
+    <string name="app_name">Ila</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
     <string name="homeButton">Home</string>
-    <string name="readingButton">Reading</string>
-    <string name="settingsButton">Settings</string>
+    <string name="dashboardButton">Dashboard</string>
     <string name="notificationsButton">Notifications</string>
-    <string name="DarkModeButton">DarkMode</string>
-    <string name="TextToSpeechButton">TextToSpeech</string>
-    <string name="PlaceHolderButton">PlaceHolder</string>
-    <string name="NameTextBox">Name:</string>
 </resources>
