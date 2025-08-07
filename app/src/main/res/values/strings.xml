@@ -4,5 +4,8 @@
     <string name="textToSpeechButton">TextToSpeech</string>
     <string name="notificationsButton">Notifications</string>
     <string name="darkModeButton">DarkMode</string>
+    <string name="settingsButton">Settings</string>
+    <string name="NameTextBox">Name:</string>
+    <string name="readingButton">Reading</string>
     <string name="placeholderButton">PlaceHolder</string>
 </resources>
