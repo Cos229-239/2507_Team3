@@ -4,7 +4,7 @@ import android.content.Context;
 import android.media.MediaPlayer;
 
 public class PlaySounds {
-    private static PlaySounds instance;
+    private static volatile PlaySounds instance;
     private final Context context;
 
     private PlaySounds(Context context)
@@ -19,10 +19,16 @@ public class PlaySounds {
             }
         });
     }
-    public static synchronized PlaySounds getInstance(Context context) {
-        if (instance == null) {
-            instance = new PlaySounds(context);
-        }
+    public static PlaySounds getInstance(Context context)
+    {
+        if (instance == null)
+            synchronized (PlaySounds.class)
+            {
+                if(instance == null)
+                {
+                    instance= new PlaySounds(context);
+                }
+            }
         return instance;
 
     }
@@ -30,7 +36,7 @@ public class PlaySounds {
     {
         MediaPlayer mediaPlayer;
         mediaPlayer = MediaPlayer.create(context, soundId);
-        mediaPlayer.setVolume(25,25);
+        mediaPlayer.setVolume(10,10);
         mediaPlayer.start();
     }
     public void playSound(Context context,int soundId, int volume)//mono audio volume
