@@ -10,7 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
-import com.ila.Sounds.PlaySounds;
+import com.ila.playSounds.PlaySounds;
 import com.ila.R;
 import com.ila.databinding.FragmentIdentifyerBinding;
 

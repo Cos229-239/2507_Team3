@@ -14,7 +14,7 @@ import android.speech.tts.TextToSpeech;
 
 import com.ila.R;
 import com.ila.databinding.FragmentSettingsBinding;
-import com.ila.Sounds.PlaySounds;
+import com.ila.playSounds.PlaySounds;
 import com.ila.settings.SettingsHandler;
 
 import java.util.Locale;
