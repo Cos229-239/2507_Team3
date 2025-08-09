@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/navigation_home">
+    app:startDestination="@+id/navigation_Identifyer">
 
 
     <fragment
@@ -14,7 +14,6 @@
     <action
         android:id="@+id/action_Home_to_Dashboard"
         app:destination="@id/navigation_dashboard"/>
-
     <fragment
         android:id="@+id/navigation_dashboard"
         android:name="com.ila.ui.classes.ClassesFragment"
@@ -44,6 +43,14 @@
     <action
         android:id="@+id/action_Home_to_Settings"
         app:destination="@+id/navigation_Settings"/>
+    <fragment
+        android:id="@+id/navigation_Identifyer"
+        android:name="com.ila.LoginUi.Identifyer.IdentifyerFragment"
+        android:label="Identifyer"
+        tools:layout="@layout/fragment_identifyer"/>
+    <action
+        android:id="@+id/action_to_Identifyer"
+        app:destination="@id/navigation_Identifyer"/>
     <action
         android:id="@+id/action_to_Home"
         app:destination="@+id/navigation_home"/>
