@@ -13,14 +13,13 @@ import androidx.lifecycle.ViewModelProvider;
 import android.speech.tts.TextToSpeech;
 import com.ila.databinding.FragmentSettingsBinding;
 import com.ila.R;
+import com.ila.ButtonSound.buttonSound;
 import com.ila.settings.SettingsHandler;
 
 import java.util.Locale;
 
 public class SettingsFragment extends Fragment{
 
-    MediaPlayer mediaPlayer;
-    MediaPlayer mediaPlaceHolder;
     private TextToSpeech tts;
     private FragmentSettingsBinding binding;
     private SettingsHandler settingsHandler;
@@ -31,8 +30,6 @@ public class SettingsFragment extends Fragment{
                 new ViewModelProvider(this).get(SettingsViewModel.class);
 
         settingsHandler = new SettingsHandler(this.getContext());
-        mediaPlayer = MediaPlayer.create(requireActivity(),R.raw.button_knock);
-        mediaPlaceHolder = MediaPlayer.create(requireActivity(),R.raw.placeholder);
 
         binding = FragmentSettingsBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
@@ -48,31 +45,25 @@ public class SettingsFragment extends Fragment{
                     tts.setLanguage(Locale.US);
                 }
                 else {
-                    mediaPlaceHolder.start();
+                    buttonSound.playButtonSound(requireContext());
                 }
             }
         });
         return root;
     }
     public void ButtonClicked(int i) {
-        mediaPlayer.start();
+        buttonSound.playButtonSound(this.getContext());
         switch(i){
         case 0:
             settingsHandler.setNightMode();
             break;
-            case 1:
-                break;
         default:
-            mediaPlaceHolder.start();
             break;
     }
-        mediaPlayer.stop();
     }
 
     @Override
     public void onDestroyView() {
-        mediaPlaceHolder.release();
-        mediaPlayer.release();
         if (tts != null) {
             tts.stop();
             tts.shutdown();

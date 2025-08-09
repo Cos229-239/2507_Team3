@@ -6,7 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.TextView;
-import android.media.MediaPlayer;
+import com.ila.ButtonSound.buttonSound;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
@@ -17,7 +17,6 @@ import com.ila.R;
 import com.ila.databinding.FragmentHomeBinding;
 
 public class HomeFragment extends Fragment {
-    MediaPlayer mediaPlayer;
     private FragmentHomeBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -25,7 +24,6 @@ public class HomeFragment extends Fragment {
         HomeViewModel homeViewModel =
                 new ViewModelProvider(this).get(HomeViewModel.class);
 
-        mediaPlayer = MediaPlayer.create(requireActivity(),R.raw.button_knock);
 
         binding = FragmentHomeBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
@@ -49,7 +47,7 @@ public class HomeFragment extends Fragment {
     }
     public void ButtonClicked(int i)
     {
-        mediaPlayer.start();
+        buttonSound.playButtonSound(this.getContext());
         NavController navController = Navigation.findNavController(requireActivity(), R.id.nav_host_fragment_activity_main);
         switch (i) {
             case 0:
@@ -66,11 +64,9 @@ public class HomeFragment extends Fragment {
             default:
                 return;
         }
-        mediaPlayer.stop();
     }
     @Override
     public void onDestroyView() {
-        mediaPlayer.release();
         super.onDestroyView();
         binding = null;
     }
