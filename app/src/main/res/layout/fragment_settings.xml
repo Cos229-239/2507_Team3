@@ -55,27 +55,31 @@
                 android:layout_width="match_parent"
                 android:layout_height="105dp"
                 android:text="@string/darkModeButton"
-                android:padding="10dp" />
+                android:padding="10dp"
+                android:soundEffectsEnabled="false"/>
 
             <Button
                 android:id="@+id/buttonTextToSpeech"
                 android:layout_width="match_parent"
                 android:layout_height="105dp"
                 android:text="@string/textToSpeechButton"
-                android:padding="10dp"/>
+                android:padding="10dp"
+                android:soundEffectsEnabled="false"/>
 
             <Button
                 android:id="@+id/buttonPlaceHolder"
                 android:layout_width="match_parent"
                 android:layout_height="105dp"
                 android:text="@string/placeholder"
-                android:padding="10dp" />
+                android:padding="10dp"
+                android:soundEffectsEnabled="false"/>
             <Button
                 android:id="@+id/button0PlaceHolder"
                 android:layout_width="match_parent"
                 android:layout_height="105dp"
                 android:text="@string/placeholder"
-                android:padding="10dp" />
+                android:padding="10dp"
+                android:soundEffectsEnabled="false"/>
             <Button
                 android:id="@+id/button1PlaceHolder"
                 android:layout_width="match_parent"
@@ -87,13 +91,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="105dp"
                 android:text="@string/placeholder"
-                android:padding="10dp" />
+                android:padding="10dp"
+                android:soundEffectsEnabled="false"/>
             <Button
                 android:id="@+id/button3PlaceHolder"
                 android:layout_width="match_parent"
                 android:layout_height="105dp"
                 android:text="@string/placeholder"
-                android:padding="10dp" />
+                android:padding="10dp"
+                android:soundEffectsEnabled="false"/>
 
         </LinearLayout>
     </ScrollView>

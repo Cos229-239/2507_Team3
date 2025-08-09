@@ -21,7 +21,8 @@
         app:layout_constraintHorizontal_bias="1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.0"
+        android:soundEffectsEnabled="false"/>
 
     <ImageButton
         android:id="@+id/buttonNotif"
@@ -34,7 +35,8 @@
         app:layout_constraintEnd_toEndOf="@id/buttonSettings"
         app:layout_constraintStart_toStartOf="@id/buttonSettings"
         app:layout_constraintTop_toBottomOf="@id/buttonSettings"
-        app:layout_constraintVertical_bias="0.0"/>
+        app:layout_constraintVertical_bias="0.0"
+        android:soundEffectsEnabled="false"/>
 
     <ImageView
         android:id="@+id/imageBanner"
@@ -76,7 +78,8 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="@id/imageBackPackOpen"
         app:layout_constraintTop_toTopOf="@id/imageBackPackOpen"
-        app:layout_constraintVertical_bias="1.1" />
+        app:layout_constraintVertical_bias="1.1"
+        android:soundEffectsEnabled="false"/>
 
     <ImageView
         android:id="@+id/imageBackPackOpen"
@@ -105,7 +108,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        app:layout_constraintHorizontal_bias="0.0"/>
+        app:layout_constraintHorizontal_bias="0.0"
+        android:soundEffectsEnabled="false"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

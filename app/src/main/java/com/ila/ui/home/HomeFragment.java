@@ -6,7 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.TextView;
-import com.ila.ButtonSound.buttonSound;
+import com.ila.Sounds.PlaySounds;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
@@ -47,7 +47,7 @@ public class HomeFragment extends Fragment {
     }
     public void ButtonClicked(int i)
     {
-        buttonSound.playButtonSound(this.getContext());
+        PlaySounds.playSound(this.getContext(),R.raw.button_knock);
         NavController navController = Navigation.findNavController(requireActivity(), R.id.nav_host_fragment_activity_main);
         switch (i) {
             case 0:

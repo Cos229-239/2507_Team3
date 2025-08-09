@@ -10,7 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
-import com.ila.ButtonSound.buttonSound;
+import com.ila.Sounds.PlaySounds;
 import com.ila.R;
 import com.ila.databinding.FragmentIdentifyerBinding;
 
@@ -22,16 +22,26 @@ import com.ila.databinding.FragmentIdentifyerBinding;
                                  ViewGroup container, Bundle savedInstanceState) {
 
             binding = FragmentIdentifyerBinding.inflate(inflater, container, false);
-            ImageButton studentButton = binding.studentButton;
-            ImageButton teacherButton = binding.TeacherButton;
-            studentButton.setOnClickListener(v->ButtonClicked());
-            teacherButton.setOnClickListener(v->ButtonClicked());
+            ImageButton StudentButton = binding.studentButton;
+            ImageButton TeacherButton = binding.teacherButton;
+            StudentButton.setOnClickListener(v->ButtonClicked(0));
+            TeacherButton.setOnClickListener(v->ButtonClicked(1));
             return binding.getRoot();
         }
-        public void ButtonClicked() {
-            buttonSound.playButtonSound(this.getContext());
+        public void ButtonClicked(int i) {
             NavController navController = Navigation.findNavController(requireActivity(), R.id.nav_host_fragment_activity_main);
-            navController.navigate(R.id.action_to_Home);
+            switch (i)
+            {
+                case 0 :
+                    PlaySounds.playSound(this.getContext(),R.raw.button_knock);
+                    navController.navigate(R.id.action_to_Home);
+                    break;
+                case 1:
+                    PlaySounds.playSound(this.getContext(),R.raw.placeholder);
+                    navController.navigate(R.id.action_Home_to_Profile);
+                    break;
+            }
+
         }
         @Override
         public void onDestroyView() {

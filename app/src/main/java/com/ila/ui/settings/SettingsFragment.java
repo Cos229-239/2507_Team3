@@ -6,14 +6,15 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
-import android.media.MediaPlayer;
+
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 import android.speech.tts.TextToSpeech;
-import com.ila.databinding.FragmentSettingsBinding;
+
 import com.ila.R;
-import com.ila.ButtonSound.buttonSound;
+import com.ila.databinding.FragmentSettingsBinding;
+import com.ila.Sounds.PlaySounds;
 import com.ila.settings.SettingsHandler;
 
 import java.util.Locale;
@@ -45,14 +46,14 @@ public class SettingsFragment extends Fragment{
                     tts.setLanguage(Locale.US);
                 }
                 else {
-                    buttonSound.playButtonSound(requireContext());
+                    PlaySounds.playSound(requireContext(), R.raw.placeholder);
                 }
             }
         });
         return root;
     }
     public void ButtonClicked(int i) {
-        buttonSound.playButtonSound(this.getContext());
+        PlaySounds.playSound(this.getContext(), R.raw.button_knock);
         switch(i){
         case 0:
             settingsHandler.setNightMode();
