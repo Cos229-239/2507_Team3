@@ -12,6 +12,7 @@ import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import com.ila.playSounds.PlaySounds;
 import com.ila.R;
+
 import com.ila.databinding.FragmentIdentifyerBinding;
 
     public class IdentifyerFragment extends Fragment {
@@ -33,11 +34,11 @@ import com.ila.databinding.FragmentIdentifyerBinding;
             switch (i)
             {
                 case 0 :
-                    PlaySounds.playSound(this.getContext(),R.raw.button_knock);
+                    PlaySounds.getInstance(this.getContext()).playSound(R.raw.button_knock);
                     navController.navigate(R.id.action_to_Home);
                     break;
                 case 1:
-                    PlaySounds.playSound(this.getContext(),R.raw.placeholder);
+                    PlaySounds.getInstance(this.getContext()).playSound(R.raw.placeholder);
                     navController.navigate(R.id.action_Home_to_Profile);
                     break;
             }

@@ -47,7 +47,7 @@ public class HomeFragment extends Fragment {
     }
     public void ButtonClicked(int i)
     {
-        PlaySounds.playSound(this.getContext(),R.raw.button_knock);
+        PlaySounds.getInstance(this.getContext()).playSound(R.raw.button_knock);
         NavController navController = Navigation.findNavController(requireActivity(), R.id.nav_host_fragment_activity_main);
         switch (i) {
             case 0:

@@ -46,14 +46,14 @@ public class SettingsFragment extends Fragment{
                     tts.setLanguage(Locale.US);
                 }
                 else {
-                    PlaySounds.playSound(requireContext(), R.raw.placeholder);
+                    PlaySounds.getInstance(requireContext()).playSound(R.raw.button_knock);
                 }
             }
         });
         return root;
     }
     public void ButtonClicked(int i) {
-        PlaySounds.playSound(this.getContext(), R.raw.button_knock);
+        PlaySounds.getInstance(this.getContext()).playSound(R.raw.button_knock);
         switch(i){
         case 0:
             settingsHandler.setNightMode();
