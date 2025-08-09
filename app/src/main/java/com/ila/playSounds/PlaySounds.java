@@ -4,10 +4,10 @@ import android.content.Context;
 import android.media.MediaPlayer;
 
 public class PlaySounds {
-    private static volatile PlaySounds instance;
+    private static volatile PlaySounds instance;//volatile for fast syncronization
     private final Context context;
 
-    private PlaySounds(Context context)
+    private PlaySounds(Context context) //private constructor
     {
         this.context = context.getApplicationContext();
         MediaPlayer mediaPlayer = new MediaPlayer();
@@ -15,11 +15,10 @@ public class PlaySounds {
             @Override
             public void onCompletion(MediaPlayer mp) {
                 mp.release(); // Release resources
-                instance = null;
             }
         });
     }
-    public static PlaySounds getInstance(Context context)
+    public static PlaySounds getInstance(Context context)//double check locking singleton creation
     {
         if (instance == null)
             synchronized (PlaySounds.class)
