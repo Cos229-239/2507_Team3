@@ -5,12 +5,12 @@ import android.media.MediaPlayer;
 
 public class PlaySounds {
     private static PlaySounds instance;
-    private Context context;
-    private MediaPlayer mediaPlayer;
+    private final Context context;
+
     private PlaySounds(Context context)
     {
         this.context = context.getApplicationContext();
-        mediaPlayer = new MediaPlayer();
+        MediaPlayer mediaPlayer = new MediaPlayer();
         mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
             @Override
             public void onCompletion(MediaPlayer mp) {
