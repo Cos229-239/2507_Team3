@@ -46,7 +46,7 @@ public class SettingsFragment extends Fragment{
                     tts.setLanguage(Locale.US);
                 }
                 else {
-                    PlaySounds.getInstance(requireContext()).playSound(R.raw.button_knock);
+                    PlaySounds.getInstance(requireContext()).playSound(R.raw.placeholder);
                 }
             }
         });

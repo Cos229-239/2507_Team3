@@ -1,4 +1,4 @@
-package com.ila.LoginUi.Identifyer;
+package com.ila.loginUi.identifier;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -13,16 +13,16 @@ import androidx.navigation.Navigation;
 import com.ila.playSounds.PlaySounds;
 import com.ila.R;
 
-import com.ila.databinding.FragmentIdentifyerBinding;
+import com.ila.databinding.FragmentIdentifierBinding;
 
-    public class IdentifyerFragment extends Fragment {
+    public class IdentifierFragment extends Fragment {
 
-        private FragmentIdentifyerBinding binding;
+        private FragmentIdentifierBinding binding;
 
         public View onCreateView(@NonNull LayoutInflater inflater,
                                  ViewGroup container, Bundle savedInstanceState) {
 
-            binding = FragmentIdentifyerBinding.inflate(inflater, container, false);
+            binding = FragmentIdentifierBinding.inflate(inflater, container, false);
             ImageButton StudentButton = binding.studentButton;
             ImageButton TeacherButton = binding.teacherButton;
             StudentButton.setOnClickListener(v->ButtonClicked(0));
@@ -34,7 +34,7 @@ import com.ila.databinding.FragmentIdentifyerBinding;
             switch (i)
             {
                 case 0 :
-                    PlaySounds.getInstance(this.getContext()).playSound(R.raw.button_knock);
+                    PlaySounds.getInstance(this.getContext()).playSound(R.raw.placeholder);
                     navController.navigate(R.id.action_to_Home);
                     break;
                 case 1:

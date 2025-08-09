@@ -2,22 +2,19 @@ package com.ila.playSounds;
 
 import android.content.Context;
 import android.media.MediaPlayer;
+import android.net.Uri;
+
+import com.ila.R;
 
 public class PlaySounds {
-    private static volatile PlaySounds instance;//volatile for fast syncronization
+    private static volatile PlaySounds instance;//volatile for fast synchronization
     private final Context context;
     private MediaPlayer mediaPlayer;
 
     private PlaySounds(Context context) //private constructor
     {
         this.context = context.getApplicationContext();
-        mediaPlayer = new MediaPlayer();
-        mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-            @Override
-            public void onCompletion(MediaPlayer mp) {
-                mp.release(); // Release resources
-            }
-        });
+        preload();
     }
     public static PlaySounds getInstance(Context context)//double check locking singleton creation
     {
@@ -26,11 +23,10 @@ public class PlaySounds {
             {
                 if(instance == null)
                 {
-                    instance= new PlaySounds(context);
+                    instance = new PlaySounds(context);
                 }
             }
         return instance;
-
     }
     public void playSound(int soundId)
     {
@@ -50,4 +46,15 @@ public class PlaySounds {
         mediaPlayer.setVolume(volumeLeft,volumeRight);
         mediaPlayer.start();
     }
+    private void preload()
+    {
+        mediaPlayer = new MediaPlayer();
+        mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer mp) {
+                mp.release(); // Release resources
+            }
+        });
+    }
+
 }

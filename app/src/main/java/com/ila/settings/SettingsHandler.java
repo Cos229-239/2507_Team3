@@ -19,12 +19,12 @@ public class SettingsHandler{
         }
     }
     //TODO:Make this happen
-    public void loadPreferances()
+    public void loadPreferences()
     {
         String savedName = helper.getString("user_name", "Guest");
         int savedAge = helper.getInt("user_age", 0);
     }
-    public void setNightMode(boolean set) //for preferances
+    public void setNightMode(boolean set) //for preferences
     {
         if (set) {
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
