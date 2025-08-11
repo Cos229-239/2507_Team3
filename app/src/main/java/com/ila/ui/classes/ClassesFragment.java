@@ -32,6 +32,6 @@ public class ClassesFragment extends Fragment {
     @Override
     public void onDestroyView() {
         super.onDestroyView();
-        binding = null;
+        binding =  null;
     }
 }
