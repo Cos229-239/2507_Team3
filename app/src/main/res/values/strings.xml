@@ -8,4 +8,5 @@
     <string name="NameTextBox">Name:</string>
     <string name="readingButton">Reading</string>
     <string name="placeholder">PlaceHolder</string>
+    <string name="example_notification_text">Example</string>
 </resources>
