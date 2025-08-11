@@ -9,4 +9,5 @@
     <string name="readingButton">Reading</string>
     <string name="placeholder">PlaceHolder</string>
     <string name="identifierString">Who Are You?</string>
+    <string name="example_notification_text">Example</string>
 </resources>
