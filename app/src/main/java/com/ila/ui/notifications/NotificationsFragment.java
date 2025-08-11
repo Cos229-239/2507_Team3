@@ -11,7 +11,9 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
+import com.ila.R;
 import com.ila.databinding.FragmentNotificationsBinding;
+import com.ila.playSounds.PlaySounds;
 
 public class NotificationsFragment extends Fragment {
 
@@ -32,6 +34,7 @@ public class NotificationsFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Toast.makeText(getContext(), "Notification clicked!", Toast.LENGTH_SHORT).show();
+                PlaySounds.getInstance(requireContext()).playSound(R.raw.button_knock);
             }
         });
 

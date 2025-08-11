@@ -34,7 +34,7 @@ import com.ila.databinding.FragmentIdentifierBinding;
             switch (i)
             {
                 case 0 :
-                    PlaySounds.getInstance(this.getContext()).playSound(R.raw.placeholder);
+                    PlaySounds.getInstance(this.getContext()).playSound(R.raw.button_knock);
                     navController.navigate(R.id.action_to_Home);
                     break;
                 case 1:

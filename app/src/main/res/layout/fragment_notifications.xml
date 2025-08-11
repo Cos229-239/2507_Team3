@@ -47,7 +47,8 @@
         app:layout_constraintTop_toBottomOf="@id/banner_container"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5">
+        app:layout_constraintHorizontal_bias="0.5"
+        android:soundEffectsEnabled="false">
 
         <TextView
             android:id="@+id/example_notification_text"
