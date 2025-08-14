@@ -5,12 +5,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.navigation.Navigation;
 
+import com.ila.R;
 import com.ila.databinding.FragmentNotificationsBinding;
 
 public class NotificationsFragment extends Fragment {
@@ -27,11 +28,10 @@ public class NotificationsFragment extends Fragment {
         final TextView textView = binding.textNotifications;
         notificationsViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
 
-        // Set up click listener for the notification card
         binding.exampleNotificationCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getContext(), "Notification clicked!", Toast.LENGTH_SHORT).show();
+                Navigation.findNavController(v).navigate(R.id.action_notifications_to_classes);
             }
         });
 

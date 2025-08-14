@@ -36,6 +36,9 @@
     <action
         android:id="@+id/action_Home_to_Notifications"
         app:destination="@id/navigation_notifications"/>
+    <action
+        android:id="@+id/action_notifications_to_classes"
+        app:destination="@id/navigation_dashboard"/>
     <fragment
         android:id="@+id/navigation_Settings"
         android:name="com.ila.ui.settings.SettingsFragment"
