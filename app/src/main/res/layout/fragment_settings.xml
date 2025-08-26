@@ -47,58 +47,30 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:padding="20dp">
 
+            <!-- Dark Mode Button -->
             <Button
-                android:id="@+id/buttonDarkMode"
+                android:id="@+id/darkModeButton"
                 android:layout_width="match_parent"
-                android:layout_height="105dp"
+                android:layout_height="wrap_content"
                 android:text="@string/darkModeButton"
-                android:padding="10dp"
-                android:soundEffectsEnabled="false"/>
+                android:padding="15dp"
+                android:background="@drawable/button_border_outline"
+                android:textColor="@android:color/white"
+                android:layout_marginBottom="20dp"/>
 
+            <!-- Change Password Button -->
             <Button
-                android:id="@+id/buttonTextToSpeech"
+                android:id="@+id/changePasswordButton"
                 android:layout_width="match_parent"
-                android:layout_height="105dp"
-                android:text="@string/textToSpeechButton"
-                android:padding="10dp"
-                android:soundEffectsEnabled="false"/>
-
-            <Button
-                android:id="@+id/buttonPlaceHolder"
-                android:layout_width="match_parent"
-                android:layout_height="105dp"
-                android:text="@string/placeholder"
-                android:padding="10dp"
-                android:soundEffectsEnabled="false"/>
-            <Button
-                android:id="@+id/button0PlaceHolder"
-                android:layout_width="match_parent"
-                android:layout_height="105dp"
-                android:text="@string/placeholder"
-                android:padding="10dp"
-                android:soundEffectsEnabled="false"/>
-            <Button
-                android:id="@+id/button1PlaceHolder"
-                android:layout_width="match_parent"
-                android:layout_height="105dp"
-                android:text="@string/placeholder"
-                android:padding="10dp" />
-            <Button
-                android:id="@+id/button2PlaceHolder"
-                android:layout_width="match_parent"
-                android:layout_height="105dp"
-                android:text="@string/placeholder"
-                android:padding="10dp"
-                android:soundEffectsEnabled="false"/>
-            <Button
-                android:id="@+id/button3PlaceHolder"
-                android:layout_width="match_parent"
-                android:layout_height="105dp"
-                android:text="@string/placeholder"
-                android:padding="10dp"
-                android:soundEffectsEnabled="false"/>
+                android:layout_height="wrap_content"
+                android:text="@string/changePasswordButton"
+                android:padding="15dp"
+                android:background="@drawable/button_border_outline"
+                android:textColor="@android:color/white"
+                android:layout_marginBottom="20dp"/>
 
         </LinearLayout>
     </ScrollView>

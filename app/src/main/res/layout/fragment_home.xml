@@ -8,14 +8,14 @@
 
 
     <ImageButton
-        android:id="@+id/buttonSettings"
+        android:id="@+id/buttonNotif"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="5dp"
         android:layout_marginTop="120dp"
         android:background="@null"
-        android:contentDescription="@string/settingsButton"
-        android:src="@drawable/gear_icon0"
+        android:contentDescription="@string/notificationsButton"
+        android:src="@drawable/bell_icon0"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1"
@@ -25,16 +25,16 @@
         android:soundEffectsEnabled="false"/>
 
     <ImageButton
-        android:id="@+id/buttonNotif"
+        android:id="@+id/buttonMessages"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@null"
-        android:contentDescription="@string/notificationsButton"
-        android:src="@drawable/bell_icon0"
+        android:contentDescription="@string/messagesButton"
+        android:src="@drawable/envelope_icon"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@id/buttonSettings"
-        app:layout_constraintStart_toStartOf="@id/buttonSettings"
-        app:layout_constraintTop_toBottomOf="@id/buttonSettings"
+        app:layout_constraintEnd_toEndOf="@id/buttonNotif"
+        app:layout_constraintStart_toStartOf="@id/buttonNotif"
+        app:layout_constraintTop_toBottomOf="@id/buttonNotif"
         app:layout_constraintVertical_bias="0.0"
         android:soundEffectsEnabled="false"/>
 

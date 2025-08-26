@@ -61,6 +61,41 @@
         android:name="com.ila.loginUi.login.TeacherLoginFragment"
         android:label="@string/teacherLoginTitle"
         tools:layout="@layout/teacher_login_screen"/>
+    <fragment
+        android:id="@+id/navigation_TeacherDashboard"
+        android:name="com.ila.ui.dashboard.TeacherDashboardFragment"
+        android:label="@string/teacherDashboardTitle"
+        tools:layout="@layout/teacher_dashboard_screen"/>
+    <fragment
+        android:id="@+id/navigation_Messaging"
+        android:name="com.ila.ui.messaging.MessagingFragment"
+        android:label="@string/messagingTitle"
+        tools:layout="@layout/messaging_screen"/>
+    <fragment
+        android:id="@+id/navigation_Lessons"
+        android:name="com.ila.ui.lessons.LessonsFragment"
+        android:label="@string/lessonsTitle"
+        tools:layout="@layout/lessons_screen"/>
+    <fragment
+        android:id="@+id/navigation_Problems"
+        android:name="com.ila.ui.problems.ProblemFragment"
+        android:label="Math Problems"
+        tools:layout="@layout/problem_screen">
+        
+        <action
+            android:id="@+id/action_Problems_to_Results"
+            app:destination="@id/navigation_Results"/>
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_Results"
+        android:name="com.ila.ui.results.ResultsFragment"
+        android:label="Lesson Results"
+        tools:layout="@layout/results_screen"/>
+    <fragment
+        android:id="@+id/navigation_ProgressReports"
+        android:name="com.ila.ui.progress.ProgressReportsFragment"
+        android:label="Progress Reports"
+        tools:layout="@layout/progress_reports_screen"/>
     <action
         android:id="@+id/action_to_Identifier"
         app:destination="@id/navigation_Identifier"/>
@@ -70,6 +105,24 @@
     <action
         android:id="@+id/action_to_TeacherLogin"
         app:destination="@id/navigation_TeacherLogin"/>
+    <action
+        android:id="@+id/action_to_TeacherDashboard"
+        app:destination="@id/navigation_TeacherDashboard"/>
+    <action
+        android:id="@+id/action_to_Messaging"
+        app:destination="@id/navigation_Messaging"/>
+    <action
+        android:id="@+id/action_to_Lessons"
+        app:destination="@id/navigation_Lessons"/>
+    <action
+        android:id="@+id/action_to_Problems"
+        app:destination="@id/navigation_Problems"/>
+    <action
+        android:id="@+id/action_to_Results"
+        app:destination="@id/navigation_Results"/>
+    <action
+        android:id="@+id/action_to_ProgressReports"
+        app:destination="@id/navigation_ProgressReports"/>
     <action
         android:id="@+id/action_to_Home"
         app:destination="@id/navigation_home"/>

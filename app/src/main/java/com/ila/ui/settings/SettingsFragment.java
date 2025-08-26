@@ -5,73 +5,64 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.TextView;
+import android.widget.Switch;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
-import android.speech.tts.TextToSpeech;
 
 import com.ila.R;
 import com.ila.databinding.FragmentSettingsBinding;
 import com.ila.playSounds.PlaySounds;
 import com.ila.settings.SettingsHandler;
 
-import java.util.Locale;
-
 public class SettingsFragment extends Fragment{
 
-    private TextToSpeech tts;
     private FragmentSettingsBinding binding;
+    private SettingsViewModel settingsViewModel;
     private SettingsHandler settingsHandler;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        SettingsViewModel SettingsViewModel =
-                new ViewModelProvider(this).get(SettingsViewModel.class);
-
+        settingsViewModel = new ViewModelProvider(this).get(SettingsViewModel.class);
         settingsHandler = new SettingsHandler(this.getContext());
 
         binding = FragmentSettingsBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
-        final TextView textView = binding.textSettings;
-        SettingsViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
         
-        Button AndButton = binding.buttonDarkMode;
-        AndButton.setOnClickListener(v -> ButtonClicked(0));
+        // Set up dark mode button
+        Button darkModeButton = binding.darkModeButton;
+        darkModeButton.setOnClickListener(v -> handleDarkModeToggle());
         
-        tts = new TextToSpeech(requireContext().getApplicationContext(), new TextToSpeech.OnInitListener() {
-            @Override
-            public void onInit(int status) {
-                if(status == TextToSpeech.SUCCESS)
-                {
-                    tts.setLanguage(Locale.US);
-                }
-                else {
-                    PlaySounds.getInstance(requireContext()).playSound(R.raw.placeholder);
-                }
-            }
-        });
+        // Set up change password button
+        Button changePasswordButton = binding.changePasswordButton;
+        changePasswordButton.setOnClickListener(v -> handleChangePassword());
+
         return root;
     }
-    
-    public void ButtonClicked(int i) {
-        PlaySounds.getInstance(this.getContext()).playSound(R.raw.button_knock);
-        switch(i){
-        case 0:
-            settingsHandler.setNightMode();
-            break;
-        default:
-            break;
+
+    private void handleDarkModeToggle() {
+        // Play button sound
+        PlaySounds.getInstance(requireContext()).playSound(R.raw.button_knock);
+        
+        // Toggle dark mode
+        settingsHandler.setNightMode();
+        
+        // Show feedback message
+        Toast.makeText(requireContext(), "Dark mode toggled!", Toast.LENGTH_SHORT).show();
     }
+
+    private void handleChangePassword() {
+        // Play button sound
+        PlaySounds.getInstance(requireContext()).playSound(R.raw.button_knock);
+        
+        // TODO: Implement change password functionality
+        Toast.makeText(requireContext(), "Change Password feature coming soon!", Toast.LENGTH_SHORT).show();
     }
 
     @Override
     public void onDestroyView() {
-        if (tts != null) {
-            tts.stop();
-            tts.shutdown();
-        }
         super.onDestroyView();
         binding = null;
     }
