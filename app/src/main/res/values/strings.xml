@@ -10,4 +10,21 @@
     <string name="placeholder">PlaceHolder</string>
     <string name="identifierString">Who Are You?</string>
     <string name="example_notification_text">Example</string>
+    <string name="loginTitle">Student Login</string>
+    <string name="teacherLoginTitle">Teacher Login</string>
+    <string name="usernameHint">Username</string>
+    <string name="emailHint">Email</string>
+    <string name="passwordHint">Password</string>
+    <string name="enterButton">Enter</string>
+    <string name="loginSuccess">Login successful! Welcome %s</string>
+    <string name="loginError">Please enter both username and password</string>
+    <string name="invalidCredentials">Invalid credentials. Please try again.</string>
+    <string name="invalidEmail">Please enter a valid email address</string>
+    <string name="logoutButton">Logout</string>
+    <string name="logoutSuccess">Logged out successfully</string>
+    <string name="profileInfo">Profile Information</string>
+    <string name="emailLabel">Email:</string>
+    <string name="userTypeLabel">User Type:</string>
+    <string name="editProfileButton">Edit Profile</string>
+    <string name="changePasswordButton">Change Password</string>
 </resources>

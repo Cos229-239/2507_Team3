@@ -36,8 +36,10 @@ public class SettingsFragment extends Fragment{
         View root = binding.getRoot();
         final TextView textView = binding.textSettings;
         SettingsViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
+        
         Button AndButton = binding.buttonDarkMode;
         AndButton.setOnClickListener(v -> ButtonClicked(0));
+        
         tts = new TextToSpeech(requireContext().getApplicationContext(), new TextToSpeech.OnInitListener() {
             @Override
             public void onInit(int status) {
@@ -52,6 +54,7 @@ public class SettingsFragment extends Fragment{
         });
         return root;
     }
+    
     public void ButtonClicked(int i) {
         PlaySounds.getInstance(this.getContext()).playSound(R.raw.button_knock);
         switch(i){

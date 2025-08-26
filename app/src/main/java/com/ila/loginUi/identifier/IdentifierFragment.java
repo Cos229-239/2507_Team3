@@ -33,13 +33,11 @@ import com.ila.databinding.FragmentIdentifierBinding;
             NavController navController = Navigation.findNavController(requireActivity(), R.id.nav_host_fragment_activity_main);
             switch (i)
             {
-                case 0 :
-                    PlaySounds.getInstance(this.getContext()).playSound(R.raw.placeholder);
-                    navController.navigate(R.id.action_to_Home);
+                case 0 : // Student button
+                    navController.navigate(R.id.action_to_Login);
                     break;
-                case 1:
-                    PlaySounds.getInstance(this.getContext()).playSound(R.raw.placeholder);
-                    navController.navigate(R.id.action_Home_to_Profile);
+                case 1: // Teacher button
+                    navController.navigate(R.id.action_to_TeacherLogin);
                     break;
             }
 

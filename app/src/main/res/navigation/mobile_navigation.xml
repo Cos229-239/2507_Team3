@@ -45,16 +45,32 @@
         tools:layout="@layout/fragment_settings"/>
     <action
         android:id="@+id/action_Home_to_Settings"
-        app:destination="@+id/navigation_Settings"/>
+        app:destination="@id/navigation_Settings"/>
     <fragment
         android:id="@+id/navigation_Identifier"
         android:name="com.ila.loginUi.identifier.IdentifierFragment"
         android:label="Identifier"
         tools:layout="@layout/fragment_identifier"/>
+    <fragment
+        android:id="@+id/navigation_Login"
+        android:name="com.ila.loginUi.login.LoginFragment"
+        android:label="@string/loginTitle"
+        tools:layout="@layout/login_screen"/>
+    <fragment
+        android:id="@+id/navigation_TeacherLogin"
+        android:name="com.ila.loginUi.login.TeacherLoginFragment"
+        android:label="@string/teacherLoginTitle"
+        tools:layout="@layout/teacher_login_screen"/>
     <action
         android:id="@+id/action_to_Identifier"
         app:destination="@id/navigation_Identifier"/>
     <action
+        android:id="@+id/action_to_Login"
+        app:destination="@id/navigation_Login"/>
+    <action
+        android:id="@+id/action_to_TeacherLogin"
+        app:destination="@id/navigation_TeacherLogin"/>
+    <action
         android:id="@+id/action_to_Home"
-        app:destination="@+id/navigation_home"/>
+        app:destination="@id/navigation_home"/>
 </navigation>

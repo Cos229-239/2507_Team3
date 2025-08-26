@@ -4,68 +4,153 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.settings.SettingsFragment">
+    android:background="@drawable/circular_blue"
+    tools:context=".ui.profile.ProfileFragment">
 
     <ImageView
-        android:id="@+id/banner_top_profile"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:contentDescription="@string/title_profile"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
+        android:id="@+id/ila_icon_top"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:contentDescription="@string/placeholder"
+        android:src="@drawable/ila_icon"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/banner" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="32dp"/>
 
     <TextView
         android:id="@+id/textProfile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="@string/title_profile"
         android:textColor="@color/teal_Light"
         android:textSize="40sp"
-        app:layout_constraintBottom_toBottomOf="@id/banner_top_profile"
-        app:layout_constraintEnd_toEndOf="@id/banner_top_profile"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="@id/banner_top_profile"
-        app:layout_constraintTop_toTopOf="@id/banner_top_profile"
-        app:layout_constraintVertical_bias="0.5" />
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/ila_icon_top"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"/>
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
+        android:layout_height="0dp"
+        android:layout_marginTop="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/banner_top_profile"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintTop_toBottomOf="@id/textProfile">
 
-
-
-
-    <ImageView
-        android:id="@+id/profilePicture"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:background="@color/null_color"
-        android:contentDescription="@string/title_profile"
-        android:src="@drawable/profile_icon"
-        android:layout_gravity="center_horizontal"/>
-        <TextView
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/NameTextBox"
-            android:textAlignment="center"
-            android:textSize="40sp" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/placeholder"
-            android:textAlignment="center"
-            android:textSize="40sp"/>
-    </LinearLayout>
+            android:orientation="vertical"
+            android:padding="20dp">
 
+            <ImageView
+                android:id="@+id/profilePicture"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:background="@color/null_color"
+                android:contentDescription="@string/title_profile"
+                android:src="@drawable/profile_icon"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="20dp"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/profileInfo"
+                        android:textSize="24sp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:layout_marginBottom="20dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="15dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/NameTextBox"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:layout_marginEnd="10dp"/>
+
+                        <TextView
+                            android:id="@+id/profileName"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/placeholder"
+                            android:textSize="18sp"
+                            android:background="@drawable/button_border_outline"
+                            android:padding="8dp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="15dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/userTypeLabel"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:layout_marginEnd="10dp"/>
+
+                        <TextView
+                            android:id="@+id/profileUserType"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/placeholder"
+                            android:textSize="18sp"
+                            android:background="@drawable/button_border_outline"
+                            android:padding="8dp"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <Button
+                android:id="@+id/changePasswordButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/changePasswordButton"
+                android:padding="15dp"
+                android:background="@drawable/button_border_outline"
+                android:textColor="@android:color/white"
+                android:layout_marginBottom="15dp"/>
+
+            <Button
+                android:id="@+id/buttonLogout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/logoutButton"
+                android:padding="15dp"
+                android:background="@drawable/button_border_outline"
+                android:textColor="@android:color/white"/>
+
+        </LinearLayout>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
