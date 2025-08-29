@@ -12,8 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
-import androidx.navigation.NavOptions;
-import androidx.navigation.NavArgs;
+
 
 import com.ila.R;
 import com.ila.databinding.TeacherDashboardScreenBinding;
@@ -23,14 +22,12 @@ import com.ila.preferences.UserManager;
 public class TeacherDashboardFragment extends Fragment {
 
     private TeacherDashboardScreenBinding binding;
-    private UserManager userManager;
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         
-        // Initialize UserManager
-        userManager = UserManager.getInstance(requireContext());
+
         
         binding = TeacherDashboardScreenBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
@@ -81,13 +78,7 @@ public class TeacherDashboardFragment extends Fragment {
         Toast.makeText(requireContext(), "Upload Content feature coming soon!", Toast.LENGTH_SHORT).show();
     }
 
-    private void handleProgressReports() {
-        // Play button sound
-        PlaySounds.getInstance(requireContext()).playSound(R.raw.button_knock);
-        
-        // TODO: Implement progress reports functionality
-        Toast.makeText(requireContext(), "Progress Reports feature coming soon!", Toast.LENGTH_SHORT).show();
-    }
+
     
     private void handleMessages() {
         // Play button sound

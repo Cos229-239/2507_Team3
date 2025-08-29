@@ -34,10 +34,16 @@ import com.ila.databinding.FragmentIdentifierBinding;
             switch (i)
             {
                 case 0 : // Student button
-                    navController.navigate(R.id.action_to_Login);
+                    // TEMPORARY: Bypass login for testing
+                    // TODO: Remove this bypass when Firebase is working
+                    // navController.navigate(R.id.action_to_Login); // Original navigation
+                    navController.navigate(R.id.action_to_Home); // Bypass to student home
                     break;
                 case 1: // Teacher button
-                    navController.navigate(R.id.action_to_TeacherLogin);
+                    // TEMPORARY: Bypass login for testing
+                    // TODO: Remove this bypass when Firebase is working
+                    // navController.navigate(R.id.action_to_TeacherLogin); // Original navigation
+                    navController.navigate(R.id.action_to_TeacherDashboard); // Bypass to teacher dashboard
                     break;
             }
 
