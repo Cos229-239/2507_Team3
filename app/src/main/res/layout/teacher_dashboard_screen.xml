@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/circular_blue">
+    
+    <ImageView
+        android:id="@+id/ila_icon_top"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:contentDescription="@string/placeholder"
+        android:src="@drawable/ila_icon"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"/>
+        
+    <TextView
+        android:id="@+id/dashboardTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/teacherDashboardTitle"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="@color/teal_Light"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/ila_icon_top"
+        android:layout_marginTop="20dp"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/dashboardTitle"
+        android:layout_marginTop="30dp"
+        android:padding="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+
+            <!-- Manage Classes Button -->
+            <Button
+                android:id="@+id/manageClassesButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/manageClassesButton"
+                android:padding="15dp"
+                android:background="@drawable/button_border_outline"
+                android:textColor="@android:color/white"
+                android:layout_marginBottom="15dp"/>
+
+            <!-- View Students Button -->
+            <Button
+                android:id="@+id/viewStudentsButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/viewStudentsButton"
+                android:padding="15dp"
+                android:background="@drawable/button_border_outline"
+                android:textColor="@android:color/white"
+                android:layout_marginBottom="15dp"/>
+
+            <!-- Upload Content Button -->
+            <Button
+                android:id="@+id/uploadContentButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/uploadContentButton"
+                android:padding="15dp"
+                android:background="@drawable/button_border_outline"
+                android:textColor="@android:color/white"
+                android:layout_marginBottom="15dp"/>
+
+            <!-- Progress Reports Button -->
+            <Button
+                android:id="@+id/progressReportsButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/progressReportsButton"
+                android:padding="15dp"
+                android:background="@drawable/button_border_outline"
+                android:textColor="@android:color/white"
+                android:layout_marginBottom="15dp"/>
+
+            <!-- Messages Button -->
+            <Button
+                android:id="@+id/messagesButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/messagesButton"
+                android:padding="15dp"
+                android:background="@drawable/button_border_outline"
+                android:textColor="@android:color/white"
+                android:layout_marginBottom="15dp"/>
+
+            <!-- Settings Button -->
+            <Button
+                android:id="@+id/dashboardSettingsButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/settingsButton"
+                android:padding="15dp"
+                android:background="@drawable/button_border_outline"
+                android:textColor="@android:color/white"/>
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

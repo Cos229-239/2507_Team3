@@ -54,8 +54,6 @@ public class HomeFragment extends Fragment {
                 navController.navigate(R.id.action_Home_to_Dashboard);
                 break;
             case 1:
-                navController.navigate(R.id.action_Home_to_Notifications);
-                break;
             case 2:
                 navController.navigate(R.id.action_Home_to_Notifications);
                 break;
@@ -66,7 +64,6 @@ public class HomeFragment extends Fragment {
                 navController.navigate(R.id.action_Home_to_Profile);
                 break;
             default:
-                return;
         }
     }
     @Override
