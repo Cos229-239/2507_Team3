@@ -111,5 +111,18 @@
         app:layout_constraintHorizontal_bias="0.0"
         android:soundEffectsEnabled="false"/>
 
+    <ImageButton
+        android:id="@+id/buttonGames"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:contentDescription="@string/placeholder"
+        android:src="@drawable/clown_fish"
+        android:background="@color/null_color"
+        android:scaleType="fitCenter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

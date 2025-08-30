@@ -48,8 +48,8 @@ dependencies {
     implementation(libs.navigation.ui)
     
     // Import the Firebase BoM
-    implementation(platform("com.google.firebase:firebase-bom:34.1.0"))
-    
+    implementation(platform("com.google.firebase:firebase-bom:34.2.0"))
+
     // Firebase Analytics (required for all Firebase products)
     implementation("com.google.firebase:firebase-analytics")
     

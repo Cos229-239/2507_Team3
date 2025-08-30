@@ -5,6 +5,8 @@ import androidx.annotation.NonNull;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.FirebaseApp;
+import com.google.firebase.appcheck.FirebaseAppCheck;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -15,14 +17,16 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class FirebaseAuthManager {
+
     private static FirebaseAuthManager instance;
-    private FirebaseAuth mAuth;
-    private FirebaseFirestore db;
+    private final FirebaseAuth mAuth;
+    private final FirebaseFirestore db;
     private static final String TAG = "FirebaseAuthManager";
 
     private FirebaseAuthManager() {
         mAuth = FirebaseAuth.getInstance();
         db = FirebaseFirestore.getInstance();
+        
     }
 
     public static synchronized FirebaseAuthManager getInstance() {

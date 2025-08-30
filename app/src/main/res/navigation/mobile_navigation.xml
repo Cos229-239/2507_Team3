@@ -5,7 +5,22 @@
     android:id="@+id/mobile_navigation"
     app:startDestination="@+id/navigation_Identifier">
 
-
+    <fragment
+        android:id="@+id/navigation_merge_fish"
+        android:name="com.ila.minigames.core.mergeFish.MergeFishFragment"
+        android:label="MergeFishSelection"
+        tools:layout="@layout/merge_fish"/>
+    <action
+        android:id="@+id/to_merge_fish"
+        app:destination="@id/navigation_merge_fish"/>
+    <fragment
+        android:id="@+id/navigation_Minigames"
+        android:name="com.ila.minigames.MiniGamesFragment"
+        android:label="MiniGamesSelection"
+        tools:layout="@layout/fragment_minigames"/>
+    <action
+        android:id="@+id/toGames"
+        app:destination="@id/navigation_Minigames"/>
     <fragment
         android:id="@+id/navigation_home"
         android:name="com.ila.ui.home.HomeFragment"

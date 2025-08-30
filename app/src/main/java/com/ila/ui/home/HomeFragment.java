@@ -34,6 +34,9 @@ public class HomeFragment extends Fragment {
         ImageButton BriButton = binding.buttonCourse;
         BriButton.setOnClickListener(v -> ButtonClicked(0));
 
+        ImageButton games_button = binding.buttonGames;
+        games_button.setOnClickListener(v -> ButtonClicked(1));
+
         ImageButton notif_button = binding.buttonNotif;
         notif_button.setOnClickListener(v -> ButtonClicked(2));
 
@@ -42,6 +45,7 @@ public class HomeFragment extends Fragment {
 
         ImageButton profile_button = binding.buttonProfile;
         profile_button.setOnClickListener(v-> ButtonClicked(4));
+
 
         return root;
     }
@@ -54,6 +58,8 @@ public class HomeFragment extends Fragment {
                 navController.navigate(R.id.action_Home_to_Dashboard);
                 break;
             case 1:
+                navController.navigate(R.id.toGames);
+                break;
             case 2:
                 navController.navigate(R.id.action_Home_to_Notifications);
                 break;
@@ -63,7 +69,9 @@ public class HomeFragment extends Fragment {
             case 4:
                 navController.navigate(R.id.action_Home_to_Profile);
                 break;
+
             default:
+                break;
         }
     }
     @Override
