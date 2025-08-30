@@ -38,18 +38,7 @@ public class Fish extends Entity {
     }
     public void swim()
     {
-        setX(getX() + random_number.getInstance().getRandom(2,true,50));
-        setY(getY() + random_number.getInstance().getRandom(2,true,50));
-    }
-
-    @Override
-    public String toString() {
-        return "Fish{" +
-                "id=" + getId() + // Access inherited properties via getters
-                ", x=" + getX() +
-                ", y=" + getY() +
-                ", species='" + species + '\'' +
-                ", color='" + color + '\'' +
-                '}';
+        setX(getX() + random_number.getInstance().getRandom(2,true,10));
+        setY(getY() + random_number.getInstance().getRandom(2,true,10));
     }
 }

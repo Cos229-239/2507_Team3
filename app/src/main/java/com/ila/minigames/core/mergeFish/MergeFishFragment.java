@@ -6,10 +6,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
+import android.widget.ImageButton;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.ViewModelProvider;
 
 
 import com.ila.R;
@@ -32,7 +32,22 @@ public class MergeFishFragment extends Fragment {
         // Add the GameView to the FrameLayout
         gameContainer.addView(gameView);
 
+        //buttons added after view to ensure usability
+        ImageButton play_game = root.findViewById(R.id.play_button);
+        play_game.setOnClickListener(v -> play_game());
+        ImageButton pause_game = root.findViewById(R.id.pause_button);
+        pause_game.setOnClickListener(v -> pause_game());
         return root;
     }
+    private void play_game()
+    {
+        gameView.startGameLoop();
+    }
+    private void pause_game()
+    {
+        gameView.stopGameLoop();
+    }
+
+
 
 }

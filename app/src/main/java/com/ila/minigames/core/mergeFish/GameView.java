@@ -1,5 +1,4 @@
 package com.ila.minigames.core.mergeFish;
-import java.util.ArrayList;
 import android.os.Handler;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -9,10 +8,8 @@ import android.graphics.Paint;
 import android.graphics.Rect;
 import android.os.Looper;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.View;
 import android.content.Context;
-import android.view.ViewTreeObserver;
 
 import com.ila.R;
 
@@ -26,13 +23,13 @@ public class GameView extends View{
     private boolean isLooping = false;
     private Handler handler;
     private Runnable gameLoop;
-
+    private int spriteSpeedX = 10;
+    private int spriteSpeedY = 10;
     private final long frameRate = 16L; // Approximately 60 frames per second (1000/60)
 
 
         public GameView(Context context, AttributeSet attrs) {
             super(context, attrs);
-
             paint = new Paint();
             paint.setColor(Color.RED);
             spriteBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.clown_fish);
@@ -70,7 +67,20 @@ public class GameView extends View{
     }
     public void updateGameState()
     {
-        return;
+        moveSpriteBounds(spriteSpeedX, spriteSpeedY);
+        // Optional: Add boundary checks to keep the sprite on screen
+        if (spriteBounds.left < 0 || spriteBounds.right > getWidth()) {
+            spriteSpeedX *= -1; // Reverse horizontal direction
+            spriteBounds.offset(spriteSpeedX, 0); // Correct position slightly if out of bounds
+        }
+        if (spriteBounds.top < 0 || spriteBounds.bottom > getHeight()) {
+            spriteSpeedY *= -1; // Reverse vertical direction
+            spriteBounds.offset(0, spriteSpeedY); // Correct position slightly
+        }
     }
+private void moveSpriteBounds(int x, int y)
+{
+    spriteBounds.offset(x,y);
+}
 
 }

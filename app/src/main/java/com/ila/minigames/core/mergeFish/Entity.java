@@ -44,12 +44,4 @@ public class Entity {
         this.y = y;
     }
 
-    @Override
-    public String toString() {
-        return "Entity{" +
-                "id=" + id +
-                ", x=" + x +
-                ", y=" + y +
-                '}';
-    }
 }
