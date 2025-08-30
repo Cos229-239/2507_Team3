@@ -10,6 +10,7 @@ import android.os.Looper;
 import android.util.AttributeSet;
 import android.view.View;
 import android.content.Context;
+import android.widget.Toast;
 
 import com.ila.R;
 
@@ -52,6 +53,13 @@ public class GameView extends View{
         // Draw the bitmap onto the canvas within the specified bounds
         canvas.drawBitmap(spriteBitmap, null, spriteBounds, paint);
     }
+    @Override
+    protected void onAttachedToWindow() {
+        super.onAttachedToWindow();
+        Toast toast = Toast.makeText(getContext().getApplicationContext(), "Attached_starting", Toast.LENGTH_SHORT);
+        toast.show();
+        startGameLoop(); // Automatically start the game when the view is attached
+    }
     public void startGameLoop() {
         if (!isLooping) {
             isLooping = true;
@@ -81,6 +89,10 @@ public class GameView extends View{
 private void moveSpriteBounds(int x, int y)
 {
     spriteBounds.offset(x,y);
+}
+public boolean getGameState()
+{
+    return isLooping;
 }
 
 }

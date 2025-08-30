@@ -16,6 +16,7 @@ import com.ila.R;
 
 public class MergeFishFragment extends Fragment {
     private GameView gameView;
+    private ImageButton changeGameState;
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater,
                          ViewGroup container, Bundle savedInstanceState) {
@@ -33,19 +34,30 @@ public class MergeFishFragment extends Fragment {
         gameContainer.addView(gameView);
 
         //buttons added after view to ensure usability
-        ImageButton play_game = root.findViewById(R.id.play_button);
-        play_game.setOnClickListener(v -> play_game());
-        ImageButton pause_game = root.findViewById(R.id.pause_button);
-        pause_game.setOnClickListener(v -> pause_game());
+        changeGameState = root.findViewById(R.id.pause_button);
+        changeGameState.setOnClickListener(v -> switchGameState());
         return root;
     }
+    private void switchGameState()
+    {
+        if(gameView.getGameState())
+        {
+            pause_game();
+        }else {
+            play_game();
+        }
+    }
+
     private void play_game()
     {
         gameView.startGameLoop();
+        changeGameState.setImageResource(R.drawable.pause);
+
     }
     private void pause_game()
     {
         gameView.stopGameLoop();
+        changeGameState.setImageResource(R.drawable.play_button);
     }
 
 
