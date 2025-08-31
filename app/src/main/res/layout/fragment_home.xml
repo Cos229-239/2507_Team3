@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/homescreenhallwayscreen"
+    android:background="@drawable/hallway"
     tools:context=".ui.home.HomeFragment">
 
 <ImageView
@@ -13,6 +13,7 @@
     android:layout_height="70dp"
     android:src="@drawable/banner"
     android:scaleType="centerCrop"
+    android:contentDescription="@string/placeholder"
     app:layout_constraintBottom_toBottomOf="parent"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
@@ -72,7 +73,7 @@
         android:layout_height="50dp"
         android:background="@null"
         android:contentDescription="@string/notificationsButton"
-        android:src="@drawable/updatedbellnotification"
+        android:src="@drawable/updated_bell_notification"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -86,7 +87,7 @@
         android:id="@+id/buttonSettings"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:src="@drawable/updatedsettingsicon"
+        android:src="@drawable/updated_settings_icon"
         android:background="@color/null_color"
         android:contentDescription="@string/title_profile"
         android:scaleType="fitCenter"
@@ -122,7 +123,7 @@
         android:layout_width="450dp"
         android:layout_height="450dp"
         android:contentDescription="@string/placeholder"
-        android:src="@drawable/closedbackpac"
+        android:src="@drawable/closed_backpack"
         android:background="@color/null_color"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
