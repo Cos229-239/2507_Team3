@@ -6,33 +6,97 @@
     android:layout_height="match_parent"
     tools:context=".ui.home.HomeFragment">
 
-    <TextView
-        android:id="@+id/text_home"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/button2"
+    <ImageButton
+        android:id="@+id/buttonNotif"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="34dp"
-        android:layout_marginTop="645dp"
-        android:layout_marginEnd="284dp"
-        android:layout_marginBottom="38dp"
-        android:onClick="BriButtonClicked"
-        android:text="@string/dashboardButton"
+        android:layout_marginEnd="5dp"
+        android:layout_marginTop="120dp"
+        android:background="@null"
+        android:contentDescription="@string/notificationsButton"
+        android:src="@drawable/bell_icon0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        android:soundEffectsEnabled="false"/>
+
+    <ImageButton
+        android:id="@+id/buttonMessages"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:contentDescription="@string/messagesButton"
+        android:src="@drawable/envelope_icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/buttonNotif"
+        app:layout_constraintStart_toStartOf="@id/buttonNotif"
+        app:layout_constraintTop_toBottomOf="@id/buttonNotif"
+        app:layout_constraintVertical_bias="0.0"
+        android:soundEffectsEnabled="false"/>
+
+    <ImageView
+        android:id="@+id/imageBanner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@null"
+        android:src="@drawable/banner"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textHome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textColor="@color/teal_Light"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toBottomOf="@id/imageBanner"
+        app:layout_constraintEnd_toEndOf="@id/imageBanner"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@id/imageBanner"
+        app:layout_constraintTop_toTopOf="@id/imageBanner"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <ImageButton
+        android:id="@+id/buttonCourse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="380dp"
+        android:background="@color/null_color"
+        android:contentDescription="@string/readingButton"
+        android:src="@drawable/folders_resized"
+        app:layout_constraintBottom_toBottomOf="@id/imageBackPackOpen"
+        app:layout_constraintEnd_toEndOf="@id/imageBackPackOpen"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@id/imageBackPackOpen"
+        app:layout_constraintTop_toTopOf="@id/imageBackPackOpen"
+        app:layout_constraintVertical_bias="1.1"
+        android:soundEffectsEnabled="false"/>
+
+    <ImageView
+        android:id="@+id/imageBackPackOpen"
+        android:layout_width="450dp"
+        android:layout_height="450dp"
+        android:contentDescription="@null"
+        android:src="@drawable/backpack_fully_open"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.35"
+        app:layout_constraintHorizontal_bias="0.5"/>
+
+    <ImageButton
+        android:id="@+id/buttonProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
 
 </androidx.constraintlayout.widget.ConstraintLayout>

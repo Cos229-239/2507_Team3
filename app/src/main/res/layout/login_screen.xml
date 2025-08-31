@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/circular_blue">
+    
+    <ImageView
+        android:id="@+id/ila_icon_top"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:contentDescription="@string/placeholder"
+        android:src="@drawable/ila_icon"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"/>
+        
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/ila_icon_top"
+        android:layout_marginTop="50dp">
+
+        <androidx.cardview.widget.CardView
+            android:layout_height="wrap_content"
+            android:layout_width="350dp"
+            android:padding="16dp">
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+                
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/loginTitle"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:layout_marginBottom="20dp"/>
+                
+                <EditText
+                    android:id="@+id/username_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/usernameHint"
+                    android:inputType="text"
+                    android:padding="12dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/button_border_outline"/>
+                    
+                <EditText
+                    android:id="@+id/password_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/passwordHint"
+                    android:inputType="textPassword"
+                    android:padding="12dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/button_border_outline"/>
+                    
+                <Button
+                    android:id="@+id/enter_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/enterButton"
+                    android:padding="12dp"
+                    android:background="@drawable/button_border_outline"
+                    android:textColor="@android:color/white"/>
+                    
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</RelativeLayout>

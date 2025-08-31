@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "683981292779",
+    "project_id": "ilaa-43313",
+    "storage_bucket": "ilaa-43313.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:683981292779:android:387b230cf36f368385eaae",
+        "android_client_info": {
+          "package_name": "com.ila"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAFCj3SP6SPIlA4qL6xOF6mUNLnv_pieJE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

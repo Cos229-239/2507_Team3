@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/navigation_home">
+    app:startDestination="@+id/navigation_Identifier">
+
 
     <fragment
         android:id="@+id/navigation_home"
@@ -15,13 +16,114 @@
         app:destination="@id/navigation_dashboard"/>
     <fragment
         android:id="@+id/navigation_dashboard"
-        android:name="com.ila.ui.dashboard.DashboardFragment"
-        android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
-
+        android:name="com.ila.ui.classes.ClassesFragment"
+        android:label="@string/title_classes"
+        tools:layout="@layout/fragment_classes" />
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.ila.ui.profile.ProfileFragment"
+        android:label="@string/title_profile"
+        tools:layout="@layout/fragment_profile"/>
+    <action
+        android:id="@+id/action_Home_to_Profile"
+        app:destination="@+id/navigation_profile"/>
     <fragment
         android:id="@+id/navigation_notifications"
         android:name="com.ila.ui.notifications.NotificationsFragment"
         android:label="@string/title_notifications"
         tools:layout="@layout/fragment_notifications" />
+    <action
+        android:id="@+id/action_Home_to_Notifications"
+        app:destination="@id/navigation_notifications"/>
+    <action
+        android:id="@+id/action_notifications_to_classes"
+        app:destination="@id/navigation_dashboard"/>
+    <fragment
+        android:id="@+id/navigation_Settings"
+        android:name="com.ila.ui.settings.SettingsFragment"
+        android:label="@string/title_Settings"
+        tools:layout="@layout/fragment_settings"/>
+    <action
+        android:id="@+id/action_Home_to_Settings"
+        app:destination="@id/navigation_Settings"/>
+    <fragment
+        android:id="@+id/navigation_Identifier"
+        android:name="com.ila.loginUi.identifier.IdentifierFragment"
+        android:label="Identifier"
+        tools:layout="@layout/fragment_identifier"/>
+    <fragment
+        android:id="@+id/navigation_Login"
+        android:name="com.ila.loginUi.login.LoginFragment"
+        android:label="@string/loginTitle"
+        tools:layout="@layout/login_screen"/>
+    <fragment
+        android:id="@+id/navigation_TeacherLogin"
+        android:name="com.ila.loginUi.login.TeacherLoginFragment"
+        android:label="@string/teacherLoginTitle"
+        tools:layout="@layout/teacher_login_screen"/>
+    <fragment
+        android:id="@+id/navigation_TeacherDashboard"
+        android:name="com.ila.ui.dashboard.TeacherDashboardFragment"
+        android:label="@string/teacherDashboardTitle"
+        tools:layout="@layout/teacher_dashboard_screen"/>
+    <fragment
+        android:id="@+id/navigation_Messaging"
+        android:name="com.ila.ui.messaging.MessagingFragment"
+        android:label="@string/messagingTitle"
+        tools:layout="@layout/messaging_screen"/>
+    <fragment
+        android:id="@+id/navigation_Lessons"
+        android:name="com.ila.ui.lessons.LessonsFragment"
+        android:label="@string/lessonsTitle"
+        tools:layout="@layout/lessons_screen"/>
+    <fragment
+        android:id="@+id/navigation_Problems"
+        android:name="com.ila.ui.problems.ProblemFragment"
+        android:label="Math Problems"
+        tools:layout="@layout/problem_screen">
+        
+        <action
+            android:id="@+id/action_Problems_to_Results"
+            app:destination="@id/navigation_Results"/>
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_Results"
+        android:name="com.ila.ui.results.ResultsFragment"
+        android:label="Lesson Results"
+        tools:layout="@layout/results_screen"/>
+    <fragment
+        android:id="@+id/navigation_ProgressReports"
+        android:name="com.ila.ui.progress.ProgressReportsFragment"
+        android:label="Progress Reports"
+        tools:layout="@layout/progress_reports_screen"/>
+    <action
+        android:id="@+id/action_to_Identifier"
+        app:destination="@id/navigation_Identifier"/>
+    <action
+        android:id="@+id/action_to_Login"
+        app:destination="@id/navigation_Login"/>
+    <action
+        android:id="@+id/action_to_TeacherLogin"
+        app:destination="@id/navigation_TeacherLogin"/>
+    <action
+        android:id="@+id/action_to_TeacherDashboard"
+        app:destination="@id/navigation_TeacherDashboard"/>
+    <action
+        android:id="@+id/action_to_Messaging"
+        app:destination="@id/navigation_Messaging"/>
+    <action
+        android:id="@+id/action_to_Lessons"
+        app:destination="@id/navigation_Lessons"/>
+    <action
+        android:id="@+id/action_to_Problems"
+        app:destination="@id/navigation_Problems"/>
+    <action
+        android:id="@+id/action_to_Results"
+        app:destination="@id/navigation_Results"/>
+    <action
+        android:id="@+id/action_to_ProgressReports"
+        app:destination="@id/navigation_ProgressReports"/>
+    <action
+        android:id="@+id/action_to_Home"
+        app:destination="@id/navigation_home"/>
 </navigation>

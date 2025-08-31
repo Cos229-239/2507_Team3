@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Ila</string>
+    <string name="title_profile">Profile</string>
+    <string name="title_home">Home</string>
+    <string name="title_classes">Classes</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_Settings">Settings</string>
+    <string name="welcome_message">Your Welcome Message Here</string>
+    <string name="select_role_message">Please select your role</string>
+    <string name="student_icon_description">Student Icon</string>
+    <string name="student_role">Student</string>
+    <string name="teacher_icon_description">Teacher Icon</string>
+    <string name="teacher_role">Teacher</string>
+</resources>
