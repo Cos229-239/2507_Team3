@@ -55,7 +55,6 @@ public class MainActivity extends AppCompatActivity {
                     navController.navigate(R.id.navigation_home);
                 } else if ("teacher".equals(userType)) {
                     // Navigate to Teacher Dashboard for teachers
-                    navController.navigate(R.id.action_to_TeacherDashboard);
                     navController.navigate(R.id.navigation_TeacherDashboard);
                 }
             }
@@ -63,17 +62,3 @@ public class MainActivity extends AppCompatActivity {
         // If not logged in, stay on the role selection screen (default start destination)
         // User will need to select role and go through login process
     }
-    
-    private void bypassLoginForTesting() {
-        // Change this to "student" or "teacher" to test different roles
-        String testRole = "student"; // or "teacher"
-            if ("student".equals(testRole)) {
-                // Navigate directly to Home screen for students
-                navController.navigate(R.id.action_to_Home);
-            } else if ("teacher".equals(testRole)) {
-                // Navigate directly to Teacher Dashboard for teachers
-                navController.navigate(R.id.action_to_TeacherDashboard);
-        }
-    }
-
-}

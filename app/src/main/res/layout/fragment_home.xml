@@ -99,8 +99,6 @@
         app:layout_constraintVertical_bias="0.08"
         app:layout_constraintHorizontal_bias="1"
         />
-
-
     <ImageButton
         android:id="@+id/buttonMessages"
         android:layout_width="50dp"
@@ -115,9 +113,6 @@
         app:layout_constraintVertical_bias="0.15"
         app:layout_constraintHorizontal_bias="1"
         android:soundEffectsEnabled="false"/>
-
-
-
     <ImageButton
         android:id="@+id/BackPack"
         android:layout_width="450dp"
@@ -130,7 +125,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.7"
+        app:layout_constraintVertical_bias="1.3"
         app:layout_constraintHorizontal_bias="0.5"/>
 
 
