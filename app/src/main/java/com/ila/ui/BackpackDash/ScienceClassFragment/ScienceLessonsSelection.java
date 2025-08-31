@@ -1,26 +1,23 @@
-package com.ila.ui.MathLessonsDetailsFragment;
-
-import androidx.lifecycle.ViewModelProvider;
+package com.ila.ui.BackpackDash.ScienceClassFragment;
 
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
+import com.ila.ui.BackpackDash.MathClassFragment.MathLessonsDetailsViewModel;
 
-import com.ila.R;
-
-public class MathLessonsDetailsFragment extends Fragment {
+public class ScienceLessonsSelection extends Fragment {
 
     private MathLessonsDetailsViewModel mViewModel;
     private FragmentMathlessonDetailBinding binding;
 
-    public static MathLessonsDetailsFragment newInstance() {
-        return new MathLessonsDetailsFragment();
+    public static ScienceLessonsSelection newInstance() {
+        return new ScienceLessonsSelection();
     }
 
     @Override

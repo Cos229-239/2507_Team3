@@ -2,21 +2,20 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/scrollView2"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <ImageView
-        android:id="@+id/imageView8"
+        android:id="@+id/imageView13"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/mathclassroomscreen" />
+        app:srcCompat="@drawable/scienceclassroomscreen" />
 
     <ImageView
-        android:id="@+id/imageView9"
-        android:layout_width="612dp"
-        android:layout_height="276dp"
+        android:id="@+id/imageView14"
+        android:layout_width="628dp"
+        android:layout_height="307dp"
         app:srcCompat="@drawable/ilasprite"
-        tools:layout_editor_absoluteX="-86dp"
-        tools:layout_editor_absoluteY="85dp" />
+        tools:layout_editor_absoluteX="-73dp"
+        tools:layout_editor_absoluteY="52dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -89,7 +89,7 @@ public class TeacherLoginFragment extends Fragment {
                     // Login successful
                     Toast.makeText(requireContext(), "Login successful!", Toast.LENGTH_SHORT).show();
                     
-                    // Navigate to teacher dashboard
+                    // Navigate to teacher BackpackDash
                     NavController navController = Navigation.findNavController(requireActivity(), R.id.nav_host_fragment_activity_main);
                     navController.navigate(R.id.action_to_TeacherDashboard);
                 } else {

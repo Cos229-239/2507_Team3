@@ -1,4 +1,4 @@
-package com.ila.ui.MathLessonsDetailsFragment;
+package com.ila.ui.BackpackDash.MathClassFragment;
 
 import androidx.lifecycle.ViewModel;
 

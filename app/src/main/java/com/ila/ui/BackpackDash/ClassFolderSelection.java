@@ -1,4 +1,4 @@
-package com.ila.ui.dashboard;
+package com.ila.ui.BackpackDash;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -15,7 +15,7 @@ import androidx.navigation.fragment.NavHostFragment;
 import com.ila.R;
 import com.ila.databinding.FragmentDashboardBinding;
 
-public class DashboardFragment extends Fragment {
+public class ClassFolderSelection extends Fragment {
 
     private FragmentDashboardBinding binding;
 

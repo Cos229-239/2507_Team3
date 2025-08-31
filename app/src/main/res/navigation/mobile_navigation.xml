@@ -15,7 +15,7 @@
         app:destination="@id/navigation_dashboard"/>
     <fragment
         android:id="@+id/navigation_dashboard"
-        android:name="com.ila.ui.dashboard.DashboardFragment"
+        android:name="com.ila.ui.BackpackDash.ClassFolderSelection"
         android:label="Dashboard" />
 
         <action
@@ -24,7 +24,7 @@
 
     <fragment
         android:id="@+id/classTopicsFragment"
-        android:name="com.ila.ui.classtopics.ClassTopicsFragment"
+        android:name="com.ila.ui.classtopics.MathClassTopics"
         android:label="Class Topics" />
 
         <action

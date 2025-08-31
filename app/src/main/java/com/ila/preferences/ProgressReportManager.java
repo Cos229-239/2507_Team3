@@ -150,7 +150,7 @@ public class ProgressReportManager {
         }
     }
 
-    // Get statistics for dashboard
+    // Get statistics for BackpackDash
     public int getTotalCompletedLessons() {
         return getAllProgressReports().size();
     }
