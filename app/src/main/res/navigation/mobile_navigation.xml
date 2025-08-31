@@ -142,4 +142,6 @@
         android:label="Teacher Login"
         tools:layout="@layout/teacher_login_screen" />
 
+<!--    it's dark in here-->
+
 </navigation>
