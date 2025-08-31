@@ -1,5 +1,7 @@
 package com.ila.ui.home;
 
+import android.graphics.Path;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,6 +10,7 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import com.ila.playSounds.PlaySounds;
 import androidx.annotation.NonNull;
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.NavController;
@@ -18,6 +21,7 @@ import com.ila.databinding.FragmentHomeBinding;
 
 public class HomeFragment extends Fragment {
     private FragmentHomeBinding binding;
+    private ImageButton backPack_button;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -31,9 +35,6 @@ public class HomeFragment extends Fragment {
         final TextView textView = binding.textHome;
         homeViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
 
-        ImageButton BriButton = binding.buttonCourse;
-        BriButton.setOnClickListener(v -> ButtonClicked(0));
-
         ImageButton games_button = binding.buttonGames;
         games_button.setOnClickListener(v -> ButtonClicked(1));
 
@@ -45,6 +46,9 @@ public class HomeFragment extends Fragment {
 
         ImageButton profile_button = binding.buttonProfile;
         profile_button.setOnClickListener(v-> ButtonClicked(4));
+
+        backPack_button = binding.BackPack;
+        backPack_button.setOnClickListener(v->ButtonClicked(0));
 
 
         return root;
