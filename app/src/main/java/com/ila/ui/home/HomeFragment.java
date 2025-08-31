@@ -64,7 +64,6 @@ public class HomeFragment extends Fragment {
                 // navController.navigate(R.id.action_Home_to_Dashboard);
                 break;
             case 1:
-                break;
                 navController.navigate(R.id.toGames);
                 break;
             case 2:

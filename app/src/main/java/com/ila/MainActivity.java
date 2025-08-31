@@ -7,10 +7,10 @@ import android.widget.ImageButton;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
 import androidx.navigation.fragment.NavHostFragment;
-
+import com.ila.preferences.UserManager;
 import com.ila.databinding.ActivityMainBinding;
+import com.ila.R;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -37,7 +37,6 @@ public class MainActivity extends AppCompatActivity {
         // Initialize UserManager
 
         // Check if user is already logged in
-        checkLoginStatus();
     }
     private void navigateHome()
     {
@@ -49,23 +48,6 @@ public class MainActivity extends AppCompatActivity {
         // bypassLoginForTesting(); // Comment this out to enable role selection
         
         // Original login check (enabled for role selection)
-//        if (userManager.isLoggedIn()) {
-//            // User is logged in, navigate to appropriate screen based on user type
-//            String userType = userManager.getCurrentUserType();
-//            NavHostFragment navHostFragment = (NavHostFragment) getSupportFragmentManager()
-//                    .findFragmentById(R.id.nav_host_fragment_activity_main);
-//
-//            if (navHostFragment != null) {
-//                NavController navController = navHostFragment.getNavController();
-//
-//                if ("student".equals(userType)) {
-//                    // Navigate to Home screen for students
-//                    navController.navigate(R.id.action_to_Home);
-//                } else if ("teacher".equals(userType)) {
-//                    // Navigate to Teacher Dashboard for teachers
-//                }
-//            }
-//        }
         // Check if user is already logged in
         if (userManager.isLoggedIn()) {
             // User is logged in, navigate to appropriate screen based on user type
@@ -75,30 +57,11 @@ public class MainActivity extends AppCompatActivity {
                     navController.navigate(R.id.navigation_home);
                 } else if ("teacher".equals(userType)) {
                     // Navigate to Teacher Dashboard for teachers
-                    navController.navigate(R.id.navigation_TeacherDashboard);
+                    navController.navigate(R.id.navigation_home);
+
                 }
             }
         }
         // If not logged in, stay on the role selection screen (default start destination)
         // User will need to select role and go through login process
     }
-    
-    private void bypassLoginForTesting() {
-        // Change this to "student" or "teacher" to test different roles
-        String testRole = "student"; // or "teacher"
-        
-        NavHostFragment navHostFragment = (NavHostFragment) getSupportFragmentManager()
-                .findFragmentById(R.id.nav_host_fragment_activity_main);
-        
-        if (navHostFragment != null) {
-            NavController navController = navHostFragment.getNavController();
-            
-            if ("student".equals(testRole)) {
-                // Navigate directly to Home screen for students
-                navController.navigate(R.id.action_to_Home);
-            } else if ("teacher".equals(testRole)) {
-                // Navigate directly to Teacher Dashboard for teachers
-            }
-        }
-    }
-}

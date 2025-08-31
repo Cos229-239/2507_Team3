@@ -10,8 +10,6 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
 
 import com.ila.R;
 import com.ila.playSounds.PlaySounds;
@@ -63,64 +61,5 @@ public class LoginFragment extends Fragment {
 
         // Convert username to email format for Firebase
         String email = username + "@gmail.com";
-
-        // TEMPORARY: Bypass Firebase for testing
-        // TODO: Re-enable Firebase authentication when ready
-        /*
-
-        // TEMPORARY: Bypass Firebase for testing
-        // TODO: Re-enable Firebase authentication when ready
-        /*
-        userManager.loginStudent(email, password, new OnCompleteListener<AuthResult>() {
-            @Override
-            public void onComplete(@NonNull Task<AuthResult> task) {
-                // Re-enable button
-                enterButton.setEnabled(true);
-                enterButton.setText("Enter");
-                
-                if (task.isSuccessful()) {
-                    // Login successful
-                    Toast.makeText(requireContext(), "Login successful!", Toast.LENGTH_SHORT).show();
-                    
-                    // Navigate to home screen
-                    NavController navController = Navigation.findNavController(requireActivity(), R.id.nav_host_fragment_activity_main);
-                    navController.navigate(R.id.action_Login_to_Home);
-                } else {
-                    // Login failed
-                    String errorMessage = "Login failed";
-                    if (task.getException() != null) {
-                        String exceptionMessage = task.getException().getMessage();
-                        if (exceptionMessage != null) {
-                            if (exceptionMessage.contains("password")) {
-                                errorMessage = "Incorrect password";
-                            } else if (exceptionMessage.contains("no user record")) {
-                                errorMessage = "User not found. Please register first.";
-                            } else if (exceptionMessage.contains("Invalid user type")) {
-                                errorMessage = "This account is not a student account";
-                            } else {
-                                errorMessage = exceptionMessage;
-                            }
-                        }
-                    }
-                    Toast.makeText(requireContext(), errorMessage, Toast.LENGTH_LONG).show();
-                }
-            }
-        });
-        */
-
-        // Simulate successful login
-        Toast.makeText(requireContext(), "Login successful! (Firebase bypassed)", Toast.LENGTH_SHORT).show();
-
-        // Navigate to home screen
-        NavController navController = Navigation.findNavController(requireActivity(), R.id.nav_host_fragment_activity_main);
-        navController.navigate(R.id.action_to_Home);
-        */
-
-        // Simulate successful login
-        Toast.makeText(requireContext(), "Login successful! (Firebase bypassed)", Toast.LENGTH_SHORT).show();
-
-        // Navigate to home screen
-        NavController navController = Navigation.findNavController(requireActivity(), R.id.nav_host_fragment_activity_main);
-        navController.navigate(R.id.action_Login_to_Home);
     }
 }

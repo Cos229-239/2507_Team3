@@ -3,8 +3,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/navigation_home">
-
     app:startDestination="@+id/navigation_Identifier">
 
     <fragment
@@ -66,10 +64,6 @@
         <action
             android:id="@+id/action_ClassSelection_to_Science_Selection"
             app:destination="@id/navigation_science_selection" />
-
-        <action
-            android:id="@+id/action_Home_to_Profile"
-            app:destination="@id/navigation_profile"/>
         <action
             android:id="@+id/action_Home_to_Messaging"
             app:destination="@id/navigation_Messaging"/>
@@ -84,11 +78,6 @@
             android:id="@+id/action_Math_Selection_to_Math_Class"
             app:destination="@+id/navigation_math_class" />
 
-<!--    <fragment-->
-<!--        android:id="@+id/navigation_math_class"-->
-<!--        android:name="com.ila.ui.BackpackDash.MathClassFragment.MathClassDetailsFragment"-->
-<!--        android:label="Math Class" />-->
-
     <fragment
         android:id="@+id/navigation_reading_selection"
         android:name="com.ila.ui.BackpackDash.ReadingClassFragment.ReadingLessonsSelection"
@@ -98,11 +87,6 @@
             android:id="@+id/action_Reading_Selection_to_Reading_Class"
             app:destination="@+id/navigation_reading_class" />
 
-<!--    <fragment-->
-<!--        android:id="@+id/navigation_reading_class"-->
-<!--        android:name="com.ila.ui.BackpackDash.ScienceClassFragment.ReadingLessonsDetails"-->
-<!--        android:label="Reading Class" />-->
-
     <fragment
         android:id="@+id/navigation_science_selection"
         android:name="com.ila.ui.BackpackDash.ScienceClassFragment.ScienceLessonsSelection"
@@ -111,16 +95,6 @@
         <action
             android:id="@+id/action_Science_Selection_to_Science_Class"
             app:destination="@+id/navigation_science_class" />
-
-<!--    <fragment-->
-<!--        android:id="@+id/navigation_science_class"-->
-<!--        android:name="com.ila.ui.BackpackDash.ScienceClassFragment.ScienceLessonsDetails"-->
-<!--        android:label="Science Class" />-->
-
-        android:id="@+id/navigation_profile"
-        android:name="com.ila.ui.profile.ProfileFragment"
-        android:label="@string/title_profile"
-        tools:layout="@layout/fragment_profile"/>
         <action
             android:id="@+id/action_Profile_to_Identifier"
             app:destination="@id/navigation_Identifier"/>
@@ -150,9 +124,6 @@
         android:label="@string/title_profile"
         tools:layout="@layout/fragment_profile"/>
 
-        android:id="@+id/action_Home_to_Notifications"
-        app:destination="@id/navigation_notifications"/>
-
     <fragment
         android:id="@+id/navigation_Settings"
         android:name="com.ila.ui.settings.SettingsFragment"
@@ -169,11 +140,8 @@
             android:id="@+id/action_Identifier_to_Home"
             app:destination="@id/navigation_home"/>
         <action
-            android:id="@+id/action_Identifier_to_TeacherDashboard"
-            app:destination="@id/navigation_TeacherDashboard"/>
-        <action
             android:id="@+id/action_Identifier_to_Login"
-            app:destination="@id/navigation_Login"/>
+            app:destination="@id/navigation_login"/>
         <action
             android:id="@+id/action_Identifier_to_TeacherLogin"
             app:destination="@id/navigation_TeacherLogin"/>
@@ -185,35 +153,24 @@
         android:label="Login"
         tools:layout="@layout/login_screen" />
 
-        android:label="@string/loginTitle"
-        tools:layout="@layout/login_screen">
         <action
             android:id="@+id/action_Login_to_Home"
             app:destination="@id/navigation_home"/>
-    </fragment>
 
     <fragment
         android:id="@+id/navigation_TeacherLogin"
         android:name="com.ila.loginUi.login.TeacherLoginFragment"
         android:label="@string/teacherLoginTitle"
         tools:layout="@layout/teacher_login_screen">
-        <action
-            android:id="@+id/action_TeacherLogin_to_TeacherDashboard"
-            app:destination="@id/navigation_TeacherDashboard"/>
+
     </fragment>
 
-    <fragment
-        android:id="@+id/navigation_TeacherDashboard"
-        android:name="com.ila.ui.dashboard.TeacherDashboardFragment"
-        android:label="@string/teacherDashboardTitle"
-        tools:layout="@layout/teacher_dashboard_screen">
         <action
             android:id="@+id/action_TeacherDashboard_to_Messaging"
             app:destination="@id/navigation_Messaging"/>
         <action
             android:id="@+id/action_TeacherDashboard_to_Settings"
             app:destination="@id/navigation_Settings"/>
-    </fragment>
 
     <fragment
         android:id="@+id/navigation_Messaging"
@@ -239,19 +196,6 @@
         android:id="@+id/action_to_Identifier"
         app:destination="@id/navigation_Identifier"/>
     <action
-        android:id="@+id/action_to_Login"
-        app:destination="@id/navigation_Login"/>
-    <action
         android:id="@+id/action_to_TeacherLogin"
         app:destination="@id/navigation_TeacherLogin"/>
-    <action
-        android:id="@+id/action_to_TeacherDashboard"
-        app:destination="@id/navigation_TeacherDashboard"/>
-    <action
-        android:id="@+id/action_to_Messaging"
-        app:destination="@id/navigation_Messaging"/>
-    <action
-        android:id="@+id/action_to_Home"
-        app:destination="@id/navigation_home"/>
-
 </navigation>

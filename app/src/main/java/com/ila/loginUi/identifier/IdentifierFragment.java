@@ -42,7 +42,7 @@ import com.ila.databinding.FragmentIdentifierBinding;
                     // TODO: Remove this bypass when Firebase is working
                     // navController.navigate(R.id.action_to_TeacherLogin); // Original navigation
                     // Navigate to teacher login screen
-                    navController.navigate(R.id.action_Identifier_to_TeacherLogin);
+                    navController.navigate(R.id.action_Identifier_to_Login);
                     break;
             }
 

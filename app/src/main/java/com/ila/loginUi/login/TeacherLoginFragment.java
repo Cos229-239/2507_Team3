@@ -70,87 +70,15 @@ public class TeacherLoginFragment extends Fragment {
         enterButton.setEnabled(false);
         enterButton.setText("Logging in...");
         
-        // Use Firebase Authentication
-//        userManager.loginTeacher(email, password, new OnCompleteListener<AuthResult>() {
-//            @Override
-//            public void onComplete(@NonNull Task<AuthResult> task) {
-//                // Re-enable button
-//                enterButton.setEnabled(true);
-//                enterButton.setText("Enter");
-//
-//                if (task.isSuccessful()) {
-//                    // Login successful
-//                    Toast.makeText(requireContext(), "Login successful!", Toast.LENGTH_SHORT).show();
-//
-//                    // Navigate to teacher BackpackDash
-//                    NavController navController = Navigation.findNavController(requireActivity(), R.id.nav_host_fragment_activity_main);
-//                    navController.navigate(R.id.action_to_TeacherDashboard);
-//                } else {
-//                    // Login failed
-//                    String errorMessage = "Login failed";
-//                    if (task.getException() != null) {
-//                        String exceptionMessage = task.getException().getMessage();
-//                        if (exceptionMessage != null) {
-//                            if (exceptionMessage.contains("password")) {
-//                                errorMessage = "Incorrect password";
-//                            } else if (exceptionMessage.contains("no user record")) {
-//                                errorMessage = "User not found. Please register first.";
-//                            } else if (exceptionMessage.contains("Invalid user type")) {
-//                                errorMessage = "This account is not a teacher account";
-//                            } else {
-//                                errorMessage = exceptionMessage;
-//                            }
-//                        }
-//                    }
-//                    Toast.makeText(requireContext(), errorMessage, Toast.LENGTH_LONG).show();
-//                }
-//            }
-//        });
+
         // TEMPORARY: Bypass Firebase for testing
         // TODO: Re-enable Firebase authentication when ready
-        /*
-        userManager.loginTeacher(email, password, new OnCompleteListener<AuthResult>() {
-            @Override
-            public void onComplete(@NonNull Task<AuthResult> task) {
-                // Re-enable button
-                enterButton.setEnabled(true);
-                enterButton.setText("Enter");
 
-                if (task.isSuccessful()) {
-                    // Login successful
-                    Toast.makeText(requireContext(), "Login successful!", Toast.LENGTH_SHORT).show();
-
-                    // Navigate to teacher dashboard
-                    NavController navController = Navigation.findNavController(requireActivity(), R.id.nav_host_fragment_activity_main);
-                    navController.navigate(R.id.action_TeacherLogin_to_TeacherDashboard);
-                } else {
-                    // Login failed
-                    String errorMessage = "Login failed";
-                    if (task.getException() != null) {
-                        String exceptionMessage = task.getException().getMessage();
-                        if (exceptionMessage != null) {
-                            if (exceptionMessage.contains("password")) {
-                                errorMessage = "Incorrect password";
-                            } else if (exceptionMessage.contains("no user record")) {
-                                errorMessage = "User not found. Please register first.";
-                            } else if (exceptionMessage.contains("Invalid user type")) {
-                                errorMessage = "This account is not a teacher account";
-                            } else {
-                                errorMessage = exceptionMessage;
-                            }
-                        }
-                    }
-                    Toast.makeText(requireContext(), errorMessage, Toast.LENGTH_LONG).show();
-                }
-            }
-        });
-        */
 
         // Simulate successful login
         Toast.makeText(requireContext(), "Login successful! (Firebase bypassed)", Toast.LENGTH_SHORT).show();
 
         // Navigate to teacher dashboard
         NavController navController = Navigation.findNavController(requireActivity(), R.id.nav_host_fragment_activity_main);
-        navController.navigate(R.id.action_TeacherLogin_to_TeacherDashboard);
     }
 }
