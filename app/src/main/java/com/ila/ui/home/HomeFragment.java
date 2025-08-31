@@ -59,6 +59,8 @@ public class HomeFragment extends Fragment {
         NavController navController = Navigation.findNavController(requireActivity(), R.id.nav_host_fragment_activity_main);
         switch (i) {
             case 0:
+                // TODO: Add navigation to your new content screen here
+                // navController.navigate(R.id.action_Home_to_Dashboard);
                 break;
             case 1:
                 navController.navigate(R.id.toGames);
@@ -67,7 +69,7 @@ public class HomeFragment extends Fragment {
                 navController.navigate(R.id.action_Home_to_Notifications);
                 break;
             case 3:
-                navController.navigate(R.id.action_to_Messaging);
+                navController.navigate(R.id.action_Home_to_Messaging);
                 break;
             case 4:
                 navController.navigate(R.id.action_Home_to_Profile);

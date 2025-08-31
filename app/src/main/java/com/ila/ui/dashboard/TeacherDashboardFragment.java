@@ -42,14 +42,12 @@ public class TeacherDashboardFragment extends Fragment {
         Button manageClassesButton = binding.manageClassesButton;
         Button viewStudentsButton = binding.viewStudentsButton;
         Button uploadContentButton = binding.uploadContentButton;
-        Button progressReportsButton = binding.progressReportsButton;
         Button messagesButton = binding.messagesButton;
         Button dashboardSettingsButton = binding.dashboardSettingsButton;
 
         manageClassesButton.setOnClickListener(v -> handleManageClasses());
         viewStudentsButton.setOnClickListener(v -> handleViewStudents());
         uploadContentButton.setOnClickListener(v -> handleUploadContent());
-        progressReportsButton.setOnClickListener(v -> handleProgressReportsClick());
         messagesButton.setOnClickListener(v -> handleMessages());
         dashboardSettingsButton.setOnClickListener(v -> handleSettings());
     }
@@ -86,7 +84,7 @@ public class TeacherDashboardFragment extends Fragment {
         
         // Navigate to Messaging screen
         NavController navController = Navigation.findNavController(requireActivity(), R.id.nav_host_fragment_activity_main);
-        navController.navigate(R.id.action_to_Messaging);
+        navController.navigate(R.id.action_TeacherDashboard_to_Messaging);
     }
 
     private void handleSettings() {
@@ -95,15 +93,7 @@ public class TeacherDashboardFragment extends Fragment {
         
         // Navigate to Settings screen
         NavController navController = Navigation.findNavController(requireActivity(), R.id.nav_host_fragment_activity_main);
-        navController.navigate(R.id.action_Home_to_Settings);
-    }
-
-    private void handleProgressReportsClick() {
-        PlaySounds.getInstance(requireContext()).playSound(R.raw.button_knock);
-        
-        // Navigate to progress reports screen
-        NavController navController = Navigation.findNavController(requireActivity(), R.id.nav_host_fragment_activity_main);
-        navController.navigate(R.id.action_to_ProgressReports);
+        navController.navigate(R.id.action_TeacherDashboard_to_Settings);
     }
 
     @Override

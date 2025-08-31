@@ -32,6 +32,8 @@ public class NotificationsFragment extends Fragment {
             @Override
             public void onClick(View v) {
 
+                // TODO: Add navigation to your new content screen here
+                // Navigation.findNavController(v).navigate(R.id.action_notifications_to_classes);
             }
         });
 

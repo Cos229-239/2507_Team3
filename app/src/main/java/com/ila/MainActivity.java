@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
         if (navHostFragment != null) {
             navController = navHostFragment.getNavController();
         }
-        
+
         // Initialize UserManager
         userManager = UserManager.getInstance(this);
         
@@ -46,24 +46,22 @@ public class MainActivity extends AppCompatActivity {
         navController.navigate(R.id.action_to_Home);
     }
     private void checkLoginStatus() {
-        // TEMPORARY: Bypass login for testing
-        // TODO: Remove this bypass when Firebase is working
-        // bypassLoginForTesting(); // Comment this out to enable role selection
-        
-        // Original login check (enabled for role selection)
+        // Check if user is already logged in
         if (userManager.isLoggedIn()) {
             // User is logged in, navigate to appropriate screen based on user type
             String userType = userManager.getCurrentUserType();
                 if ("student".equals(userType)) {
                     // Navigate to Home screen for students
-                    navController.navigate(R.id.action_to_Home);
+                    navController.navigate(R.id.navigation_home);
                 } else if ("teacher".equals(userType)) {
                     // Navigate to Teacher Dashboard for teachers
                     navController.navigate(R.id.action_to_TeacherDashboard);
+                    navController.navigate(R.id.navigation_TeacherDashboard);
+                }
             }
         }
         // If not logged in, stay on the role selection screen (default start destination)
-        // The bypass will happen when user clicks a role button
+        // User will need to select role and go through login process
     }
     
     private void bypassLoginForTesting() {
@@ -77,4 +75,5 @@ public class MainActivity extends AppCompatActivity {
                 navController.navigate(R.id.action_to_TeacherDashboard);
         }
     }
+
 }

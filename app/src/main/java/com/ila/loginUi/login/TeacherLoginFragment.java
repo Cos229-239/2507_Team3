@@ -73,11 +73,9 @@ public class TeacherLoginFragment extends Fragment {
             return;
         }
         
-        // Show loading state
-        enterButton.setEnabled(false);
-        enterButton.setText("Logging in...");
-        
-        // Use Firebase Authentication
+        // TEMPORARY: Bypass Firebase for testing
+        // TODO: Re-enable Firebase authentication when ready
+        /*
         userManager.loginTeacher(email, password, new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
@@ -91,7 +89,7 @@ public class TeacherLoginFragment extends Fragment {
                     
                     // Navigate to teacher dashboard
                     NavController navController = Navigation.findNavController(requireActivity(), R.id.nav_host_fragment_activity_main);
-                    navController.navigate(R.id.action_to_TeacherDashboard);
+                    navController.navigate(R.id.action_TeacherLogin_to_TeacherDashboard);
                 } else {
                     // Login failed
                     String errorMessage = "Login failed";
@@ -113,5 +111,13 @@ public class TeacherLoginFragment extends Fragment {
                 }
             }
         });
+        */
+        
+        // Simulate successful login
+        Toast.makeText(requireContext(), "Login successful! (Firebase bypassed)", Toast.LENGTH_SHORT).show();
+        
+        // Navigate to teacher dashboard
+        NavController navController = Navigation.findNavController(requireActivity(), R.id.nav_host_fragment_activity_main);
+        navController.navigate(R.id.action_TeacherLogin_to_TeacherDashboard);
     }
 }
