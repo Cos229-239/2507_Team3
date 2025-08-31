@@ -31,7 +31,8 @@ public class NotificationsFragment extends Fragment {
         binding.exampleNotificationCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Navigation.findNavController(v).navigate(R.id.action_notifications_to_classes);
+                // TODO: Add navigation to your new content screen here
+                // Navigation.findNavController(v).navigate(R.id.action_notifications_to_classes);
             }
         });
 
