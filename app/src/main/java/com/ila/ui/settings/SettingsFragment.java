@@ -14,17 +14,13 @@ import androidx.fragment.app.Fragment;
 import com.ila.R;
 import com.ila.databinding.FragmentSettingsBinding;
 import com.ila.playSounds.PlaySounds;
-import com.ila.settings.SettingsHandler;
 
 public class SettingsFragment extends Fragment{
 
     private FragmentSettingsBinding binding;
-    private SettingsHandler settingsHandler;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        settingsHandler = new SettingsHandler(this.getContext());
-
         binding = FragmentSettingsBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
         
@@ -44,8 +40,7 @@ public class SettingsFragment extends Fragment{
         PlaySounds.getInstance(requireContext()).playSound(R.raw.button_knock);
         
         // Toggle dark mode
-        settingsHandler.setNightMode();
-        
+
         // Show feedback message
         Toast.makeText(requireContext(), "Dark mode toggled!", Toast.LENGTH_SHORT).show();
     }

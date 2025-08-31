@@ -15,7 +15,6 @@ import androidx.fragment.app.Fragment;
 import com.ila.R;
 import com.ila.databinding.MessagingScreenBinding;
 import com.ila.playSounds.PlaySounds;
-import com.ila.preferences.UserManager;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -24,7 +23,6 @@ import java.util.Locale;
 public class MessagingFragment extends Fragment {
 
     private MessagingScreenBinding binding;
-    private UserManager userManager;
     private StringBuilder messageHistory;
 
     @Override
@@ -32,8 +30,7 @@ public class MessagingFragment extends Fragment {
                              ViewGroup container, Bundle savedInstanceState) {
         
         // Initialize UserManager
-        userManager = UserManager.getInstance(requireContext());
-        
+
         binding = MessagingScreenBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
@@ -59,53 +56,53 @@ public class MessagingFragment extends Fragment {
     }
 
     private void handleSendMessage(EditText messageInput, TextView messageList) {
-        String message = messageInput.getText().toString().trim();
-        
-        if (message.isEmpty()) {
-            Toast.makeText(requireContext(), "Please enter a message", Toast.LENGTH_SHORT).show();
-            return;
-        }
-
-        // Play button sound
-        PlaySounds.getInstance(requireContext()).playSound(R.raw.button_knock);
-        
-        // Get current timestamp
-        String timestamp = new SimpleDateFormat("HH:mm", Locale.getDefault()).format(new Date());
-        
-        // Get user info
-        String userType = userManager.getCurrentUserType();
-        String userName = userType.equals("student") ? 
-            (userManager.getCurrentUsername().isEmpty() ? "Student" : userManager.getCurrentUsername()) :
-            "Instructor";
-        
-        // Format the message
-        String formattedMessage = String.format("[%s] %s: %s\n", timestamp, userName, message);
-        
-        // Add to message history
-        messageHistory.append(formattedMessage);
-        
-        // Update the message list
-        messageList.setText(messageHistory.toString());
-        
-        // Clear input field
-        messageInput.setText("");
-        
-        // Show success message
-        Toast.makeText(requireContext(), "Message sent!", Toast.LENGTH_SHORT).show();
+//        String message = messageInput.getText().toString().trim();
+//
+//        if (message.isEmpty()) {
+//            Toast.makeText(requireContext(), "Please enter a message", Toast.LENGTH_SHORT).show();
+//            return;
+//        }
+//
+//        // Play button sound
+//        PlaySounds.getInstance(requireContext()).playSound(R.raw.button_knock);
+//
+//        // Get current timestamp
+//        String timestamp = new SimpleDateFormat("HH:mm", Locale.getDefault()).format(new Date());
+//
+//        // Get user info
+//        String userType = userManager.getCurrentUserType();
+//        String userName = userType.equals("student") ?
+//            (userManager.getCurrentUsername().isEmpty() ? "Student" : userManager.getCurrentUsername()) :
+//            "Instructor";
+//
+//        // Format the message
+//        String formattedMessage = String.format("[%s] %s: %s\n", timestamp, userName, message);
+//
+//        // Add to message history
+//        messageHistory.append(formattedMessage);
+//
+//        // Update the message list
+//        messageList.setText(messageHistory.toString());
+//
+//        // Clear input field
+//        messageInput.setText("");
+//
+//        // Show success message
+//        Toast.makeText(requireContext(), "Message sent!", Toast.LENGTH_SHORT).show();
     }
 
     private void showWelcomeMessage(TextView messageList) {
-        String userType = userManager.getCurrentUserType();
-        String welcomeMessage;
-        
-        if (userType.equals("student")) {
-            welcomeMessage = "Welcome to messaging! You can send messages to your instructors here.\n\n";
-        } else {
-            welcomeMessage = "Welcome to messaging! You can send messages to your students here.\n\n";
-        }
-        
-        messageHistory.append(welcomeMessage);
-        messageList.setText(messageHistory.toString());
+//        String userType = userManager.getCurrentUserType();
+//        String welcomeMessage;
+//
+//        if (userType.equals("student")) {
+//            welcomeMessage = "Welcome to messaging! You can send messages to your instructors here.\n\n";
+//        } else {
+//            welcomeMessage = "Welcome to messaging! You can send messages to your students here.\n\n";
+//        }
+//
+//        messageHistory.append(welcomeMessage);
+//        messageList.setText(messageHistory.toString());
     }
 
     @Override

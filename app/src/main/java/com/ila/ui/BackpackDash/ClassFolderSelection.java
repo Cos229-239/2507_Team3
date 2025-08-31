@@ -1,34 +1,36 @@
 package com.ila.ui.BackpackDash;
 
+import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.RenderEffect;
+import android.graphics.Shader;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.navigation.fragment.NavHostFragment;
 
 import com.ila.R;
-import com.ila.databinding.FragmentDashboardBinding;
+import com.ila.databinding.FragmentClassfolderselectionBinding;
+import com.ila.ui.BackpackDash.MathClassFragment.MathLessonsSelection;
+import com.ila.ui.BackpackDash.ReadingClassFragment.ReadingLessonsSelection;
+import com.ila.ui.BackpackDash.ScienceClassFragment.ScienceLessonsSelection;
 
 public class ClassFolderSelection extends Fragment {
 
-    private FragmentDashboardBinding binding;
-
-    private final String[] subjects = {
-            "Math", "Reading", "Science"
-    };
+    private FragmentClassfolderselectionBinding binding;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater,
                              @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        binding = FragmentDashboardBinding.inflate(inflater, container, false);
+        binding = FragmentClassfolderselectionBinding.inflate(inflater, container, false);
         return binding.getRoot();
     }
 
@@ -37,24 +39,32 @@ public class ClassFolderSelection extends Fragment {
                               @Nullable Bundle savedInstanceState){
         super.onViewCreated(view, savedInstanceState);
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(
-                requireContext(),
-                android.R.layout.simple_list_item_1,
-                subjects
-        );
+        binding.imageView6.setOnTouchListener((v, event) -> {
+            if (event.getAction() == MotionEvent.ACTION_UP) {
+                float x = event.getX();
+                float y = event.getY();
 
-        ListView subjectList = binding.lessonList;
-        subjectList.setAdapter(adapter);
+                int imageWidth = v.getWidth();
+                int imageHeight = v.getHeight();
 
-        subjectList.setOnItemClickListener((parent, view1, position, id) -> {
-            String selectedSubject = subjects[position];
-
-            Bundle bundle = new Bundle();
-            bundle.putString("subject_name", selectedSubject);
-
-            NavHostFragment.findNavController(this)
-                    .navigate(R.id.action_dashboardFragment_to_classTopicsFragment, bundle);
+                if (x > 100 && x < 300 && y > 300 & y < 450) {
+                    startActivity(new Intent(requireContext(), MathLessonsSelection.class));
+                } else if (x > 310 && x < 510 && y > 300 && y < 450) {
+                    startActivity(new Intent(requireContext(), ReadingLessonsSelection.class));
+                } else if (x > 520 && x < 720 && y > 300 && y < 450){
+                    startActivity(new Intent(requireContext(), ScienceLessonsSelection.class));
+                }
+            }
+            return true;
         });
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+            View blurOverlay = binding.blurOverlay;
+            blurOverlay.setRenderEffect(
+                    RenderEffect.createBlurEffect(25f, 25f, Shader.TileMode.CLAMP)
+            );
+            blurOverlay.setBackgroundColor(Color.parseColor("#AA000000"));
+        }
     }
 
     @Override

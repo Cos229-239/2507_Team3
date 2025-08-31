@@ -1,8 +1,64 @@
 <resources>
     <string name="homeButton">Home</string>
     <string name="dashboardButton">Dashboard</string>
-    <string name="title_activity_class_topics">ClassTopicsActivity</string>
-    <string name="tab_text_1">Tab 1</string>
-    <string name="tab_text_2">Tab 2</string>
+    <string name="textToSpeechButton">TextToSpeech</string>
+    <string name="notificationsButton">Notifications</string>
+    <string name="darkModeButton">DarkMode</string>
+    <string name="settingsButton">Settings</string>
+    <string name="NameTextBox">Name:</string>
+    <string name="readingButton">Reading</string>
+    <string name="placeholder">PlaceHolder</string>
+    <string name="identifierString">Who Are You?</string>
+    <string name="example_notification_text">Example</string>
+    <string name="loginTitle">Student Login</string>
+    <string name="teacherLoginTitle">Teacher Login</string>
+    <string name="usernameHint">Username</string>
+    <string name="emailHint">Email</string>
+    <string name="passwordHint">Password</string>
+    <string name="enterButton">Enter</string>
+    <string name="loginSuccess">Login successful! Welcome %s</string>
+    <string name="loginError">Please enter both username and password</string>
+    <string name="invalidCredentials">Invalid credentials. Please try again.</string>
+    <string name="invalidEmail">Please enter a valid email address</string>
+    <string name="logoutButton">Logout</string>
+    <string name="logoutSuccess">Logged out successfully</string>
+    <string name="profileInfo">Profile Information</string>
+    <string name="emailLabel">Email:</string>
+    <string name="userTypeLabel">User Type:</string>
+    <string name="editProfileButton">Edit Profile</string>
+    <string name="changePasswordButton">Change Password</string>
+    <string name="teacherDashboardTitle">Instructor Dashboard</string>
+    <string name="welcomeInstructor">Welcome, Instructor!</string>
+    <string name="dashboardWelcomeText">Welcome back! Manage your classes and track student progress.</string>
+    <string name="quickActions">Quick Actions</string>
+    <string name="manageClassesButton">Manage Classes</string>
+    <string name="viewStudentsButton">View Students</string>
+    <string name="uploadContentButton">Upload Content</string>
+    <string name="progressReportsButton">Progress Reports</string>
+    <string name="messagesButton">Messages</string>
+    <string name="messagingTitle">Messages</string>
+    <string name="messagingWelcome">Welcome to the messaging system!</string>
+    <string name="messagingPlaceholder">Your messages will appear here...</string>
+    <string name="messageHint">Type your message here...</string>
+    <string name="sendButton">Send</string>
+    <string name="classesTitle">Classes</string>
+    <string name="mathSubject">Math</string>
+    <string name="readingSubject">Reading</string>
+    <string name="scienceSubject">Science</string>
+    <string name="socialStudiesSubject">Social Studies</string>
+    <string name="saveProfileButton">Save Profile</string>
 
+    <!-- Grade Level Options -->
+    <string-array name="grade_levels">
+        <item>1st Grade</item>
+        <item>2nd Grade</item>
+        <item>3rd Grade</item>
+        <item>4th Grade</item>
+        <item>5th Grade</item>
+    </string-array>
+
+    <!-- Lessons Screen -->
+    <string name="lessonsTitle">Lessons</string>
+    <string name="lessonsWelcome">Welcome to your grade-appropriate lessons!</string>
+    <string name="lessonsPlaceholder">Lessons will appear here based on your grade level...</string>
 </resources>

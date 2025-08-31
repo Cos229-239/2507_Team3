@@ -43,7 +43,6 @@ import com.ila.databinding.FragmentIdentifierBinding;
                     // TEMPORARY: Bypass login for testing
                     // TODO: Remove this bypass when Firebase is working
                     // navController.navigate(R.id.action_to_TeacherLogin); // Original navigation
-                    navController.navigate(R.id.action_to_TeacherDashboard); // Bypass to teacher BackpackDash
                     break;
             }
 

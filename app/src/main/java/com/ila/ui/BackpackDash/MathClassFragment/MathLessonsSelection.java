@@ -10,10 +10,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.ila.R;
+import com.ila.databinding.FragmentMathLessonsSelectionBinding;
+
 public class MathLessonsSelection extends Fragment {
 
     private MathLessonsDetailsViewModel mViewModel;
-    private FragmentMathlessonDetailBinding binding;
+    private FragmentMathLessonsSelectionBinding binding;
 
     public static MathLessonsSelection newInstance() {
         return new MathLessonsSelection();
@@ -23,7 +26,7 @@ public class MathLessonsSelection extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater,
                              @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        binding = FragmentMathLessonDetailBinding.inflate(inflater, container, false);
+        binding = FragmentMathLessonsSelectionBinding.inflate(inflater, container, false);
         return binding.getRoot();
     }
 
@@ -32,10 +35,6 @@ public class MathLessonsSelection extends Fragment {
                               @Nullable Bundle savedInstanceState){
         super.onViewCreated(view, savedInstanceState);
 
-        String lessonName = requireArguments().getString("lesson_name", "Unknown Lesson");
-        binding.lessonTitle.setText(lessonName);
-
-        //possibly adding lesson content here
     }
 
     @Override

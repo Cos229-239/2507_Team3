@@ -14,67 +14,58 @@ import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 
 import com.ila.R;
-import com.ila.databinding.LoginScreenBinding;
 import com.ila.playSounds.PlaySounds;
-import com.ila.preferences.UserManager;
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.AuthResult;
 
 public class LoginFragment extends Fragment {
 
     private EditText usernameInput;
     private EditText passwordInput;
     private Button enterButton;
-    private UserManager userManager;
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        
+
         View root = inflater.inflate(R.layout.login_screen, container, false);
-        
+
         // Initialize UserManager
-        userManager = UserManager.getInstance(requireContext());
-        
+
         // Initialize views
         usernameInput = root.findViewById(R.id.username_input);
         passwordInput = root.findViewById(R.id.password_input);
         enterButton = root.findViewById(R.id.enter_button);
-        
+
         // Set click listener for Enter button
         enterButton.setOnClickListener(v -> handleLogin());
-        
+
         return root;
     }
-    
+
     private void handleLogin() {
         // Play button sound
         PlaySounds.getInstance(requireContext()).playSound(R.raw.button_knock);
-        
+
         // Get input values from the class fields (not local variables)
         String username = usernameInput.getText().toString().trim();
         String password = passwordInput.getText().toString().trim();
-        
+
         // Validate input
         if (username.isEmpty()) {
             Toast.makeText(requireContext(), "Please enter a username", Toast.LENGTH_SHORT).show();
             return;
         }
-        
+
         if (password.isEmpty()) {
             Toast.makeText(requireContext(), "Please enter a password", Toast.LENGTH_SHORT).show();
             return;
         }
-        
-        // Show loading state
-        enterButton.setEnabled(false);
-        enterButton.setText("Logging in...");
-        
+
         // Convert username to email format for Firebase
         String email = username + "@gmail.com";
-        
-        // Use Firebase Authentication
+
+        // TEMPORARY: Bypass Firebase for testing
+        // TODO: Re-enable Firebase authentication when ready
+        /*
         userManager.loginStudent(email, password, new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
@@ -88,7 +79,7 @@ public class LoginFragment extends Fragment {
                     
                     // Navigate to home screen
                     NavController navController = Navigation.findNavController(requireActivity(), R.id.nav_host_fragment_activity_main);
-                    navController.navigate(R.id.action_to_Home);
+                    navController.navigate(R.id.action_Login_to_Home);
                 } else {
                     // Login failed
                     String errorMessage = "Login failed";
@@ -110,5 +101,13 @@ public class LoginFragment extends Fragment {
                 }
             }
         });
+        */
+
+        // Simulate successful login
+        Toast.makeText(requireContext(), "Login successful! (Firebase bypassed)", Toast.LENGTH_SHORT).show();
+
+        // Navigate to home screen
+        NavController navController = Navigation.findNavController(requireActivity(), R.id.nav_host_fragment_activity_main);
+        navController.navigate(R.id.action_to_Home);
     }
 }

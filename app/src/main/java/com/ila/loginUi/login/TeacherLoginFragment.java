@@ -14,19 +14,13 @@ import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 
 import com.ila.R;
-import com.ila.databinding.TeacherLoginScreenBinding;
 import com.ila.playSounds.PlaySounds;
-import com.ila.preferences.UserManager;
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.AuthResult;
 
 public class TeacherLoginFragment extends Fragment {
 
     private EditText emailInput;
     private EditText passwordInput;
     private Button enterButton;
-    private UserManager userManager;
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -35,8 +29,7 @@ public class TeacherLoginFragment extends Fragment {
         View root = inflater.inflate(R.layout.teacher_login_screen, container, false);
         
         // Initialize UserManager
-        userManager = UserManager.getInstance(requireContext());
-        
+
         // Initialize views
         emailInput = root.findViewById(R.id.teacher_email_input);
         passwordInput = root.findViewById(R.id.teacher_password_input);
@@ -78,40 +71,40 @@ public class TeacherLoginFragment extends Fragment {
         enterButton.setText("Logging in...");
         
         // Use Firebase Authentication
-        userManager.loginTeacher(email, password, new OnCompleteListener<AuthResult>() {
-            @Override
-            public void onComplete(@NonNull Task<AuthResult> task) {
-                // Re-enable button
-                enterButton.setEnabled(true);
-                enterButton.setText("Enter");
-                
-                if (task.isSuccessful()) {
-                    // Login successful
-                    Toast.makeText(requireContext(), "Login successful!", Toast.LENGTH_SHORT).show();
-                    
-                    // Navigate to teacher BackpackDash
-                    NavController navController = Navigation.findNavController(requireActivity(), R.id.nav_host_fragment_activity_main);
-                    navController.navigate(R.id.action_to_TeacherDashboard);
-                } else {
-                    // Login failed
-                    String errorMessage = "Login failed";
-                    if (task.getException() != null) {
-                        String exceptionMessage = task.getException().getMessage();
-                        if (exceptionMessage != null) {
-                            if (exceptionMessage.contains("password")) {
-                                errorMessage = "Incorrect password";
-                            } else if (exceptionMessage.contains("no user record")) {
-                                errorMessage = "User not found. Please register first.";
-                            } else if (exceptionMessage.contains("Invalid user type")) {
-                                errorMessage = "This account is not a teacher account";
-                            } else {
-                                errorMessage = exceptionMessage;
-                            }
-                        }
-                    }
-                    Toast.makeText(requireContext(), errorMessage, Toast.LENGTH_LONG).show();
-                }
-            }
-        });
+//        userManager.loginTeacher(email, password, new OnCompleteListener<AuthResult>() {
+//            @Override
+//            public void onComplete(@NonNull Task<AuthResult> task) {
+//                // Re-enable button
+//                enterButton.setEnabled(true);
+//                enterButton.setText("Enter");
+//
+//                if (task.isSuccessful()) {
+//                    // Login successful
+//                    Toast.makeText(requireContext(), "Login successful!", Toast.LENGTH_SHORT).show();
+//
+//                    // Navigate to teacher BackpackDash
+//                    NavController navController = Navigation.findNavController(requireActivity(), R.id.nav_host_fragment_activity_main);
+//                    navController.navigate(R.id.action_to_TeacherDashboard);
+//                } else {
+//                    // Login failed
+//                    String errorMessage = "Login failed";
+//                    if (task.getException() != null) {
+//                        String exceptionMessage = task.getException().getMessage();
+//                        if (exceptionMessage != null) {
+//                            if (exceptionMessage.contains("password")) {
+//                                errorMessage = "Incorrect password";
+//                            } else if (exceptionMessage.contains("no user record")) {
+//                                errorMessage = "User not found. Please register first.";
+//                            } else if (exceptionMessage.contains("Invalid user type")) {
+//                                errorMessage = "This account is not a teacher account";
+//                            } else {
+//                                errorMessage = exceptionMessage;
+//                            }
+//                        }
+//                    }
+//                    Toast.makeText(requireContext(), errorMessage, Toast.LENGTH_LONG).show();
+//                }
+//            }
+//        });
     }
 }
