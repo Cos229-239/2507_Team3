@@ -27,6 +27,7 @@ public class PlaySounds {
                 }
             }
         return instance;
+        //hi
     }
     public void playSound(int soundId)
     {
