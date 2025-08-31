@@ -89,7 +89,7 @@ public class ClassesFragment extends Fragment {
         
         // Navigate to lessons screen with subject argument
         NavController navController = Navigation.findNavController(requireActivity(), R.id.nav_host_fragment_activity_main);
-        navController.navigate(R.id.action_to_Lessons, args);
+        navController.navigate(R.id.action_Dashboard_to_Lessons, args);
     }
 
     @Override

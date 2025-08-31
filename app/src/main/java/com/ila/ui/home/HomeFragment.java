@@ -58,7 +58,7 @@ public class HomeFragment extends Fragment {
                 navController.navigate(R.id.action_Home_to_Notifications);
                 break;
             case 3:
-                navController.navigate(R.id.action_to_Messaging);
+                navController.navigate(R.id.action_Home_to_Messaging);
                 break;
             case 4:
                 navController.navigate(R.id.action_Home_to_Profile);

@@ -86,7 +86,7 @@ public class TeacherDashboardFragment extends Fragment {
         
         // Navigate to Messaging screen
         NavController navController = Navigation.findNavController(requireActivity(), R.id.nav_host_fragment_activity_main);
-        navController.navigate(R.id.action_to_Messaging);
+        navController.navigate(R.id.action_TeacherDashboard_to_Messaging);
     }
 
     private void handleSettings() {
@@ -95,7 +95,7 @@ public class TeacherDashboardFragment extends Fragment {
         
         // Navigate to Settings screen
         NavController navController = Navigation.findNavController(requireActivity(), R.id.nav_host_fragment_activity_main);
-        navController.navigate(R.id.action_Home_to_Settings);
+        navController.navigate(R.id.action_TeacherDashboard_to_Settings);
     }
 
     private void handleProgressReportsClick() {
@@ -103,7 +103,7 @@ public class TeacherDashboardFragment extends Fragment {
         
         // Navigate to progress reports screen
         NavController navController = Navigation.findNavController(requireActivity(), R.id.nav_host_fragment_activity_main);
-        navController.navigate(R.id.action_to_ProgressReports);
+        navController.navigate(R.id.action_TeacherDashboard_to_ProgressReports);
     }
 
     @Override

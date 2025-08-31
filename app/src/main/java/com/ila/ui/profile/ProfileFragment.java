@@ -150,7 +150,7 @@ public class ProfileFragment extends Fragment {
         
         // Navigate back to role selection screen
         androidx.navigation.NavController navController = androidx.navigation.Navigation.findNavController(requireActivity(), R.id.nav_host_fragment_activity_main);
-        navController.navigate(R.id.action_to_Identifier);
+        navController.navigate(R.id.action_Profile_to_Identifier);
     }
     
     private void handleSettings() {
@@ -159,6 +159,6 @@ public class ProfileFragment extends Fragment {
         
         // Navigate to Settings screen
         NavController navController = Navigation.findNavController(requireActivity(), R.id.nav_host_fragment_activity_main);
-        navController.navigate(R.id.action_Home_to_Settings);
+        navController.navigate(R.id.action_Profile_to_Settings);
     }
 }

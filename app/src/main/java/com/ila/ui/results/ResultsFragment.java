@@ -200,7 +200,7 @@ public class ResultsFragment extends Fragment {
         args.putString("lessonTitle", lessonTitle);
         
         NavController navController = Navigation.findNavController(requireActivity(), R.id.nav_host_fragment_activity_main);
-        navController.navigate(R.id.action_to_Problems, args);
+        navController.navigate(R.id.action_Results_to_Problems, args);
     }
 
     private void handleBackToLessonsClick() {

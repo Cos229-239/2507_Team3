@@ -98,7 +98,7 @@ public class LessonsFragment extends Fragment {
         
         // Navigate to problems screen with lesson argument
         NavController navController = Navigation.findNavController(requireActivity(), R.id.nav_host_fragment_activity_main);
-        navController.navigate(R.id.action_to_Problems, args);
+        navController.navigate(R.id.action_Lessons_to_Problems, args);
     }
 
     @Override
