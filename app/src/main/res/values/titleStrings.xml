@@ -12,4 +12,5 @@
     <string name="student_role">Student</string>
     <string name="teacher_icon_description">Teacher Icon</string>
     <string name="teacher_role">Teacher</string>
+    <string name="mini_games_title">Games</string>
 </resources>

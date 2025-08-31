@@ -60,14 +60,18 @@ public class HomeFragment extends Fragment {
         switch (i) {
             case 0:
                 navController.navigate(R.id.action_to_Class_Selection);
+                // TODO: Add navigation to your new content screen here
+                // navController.navigate(R.id.action_Home_to_Dashboard);
                 break;
             case 1:
+                break;
+                navController.navigate(R.id.toGames);
                 break;
             case 2:
                 navController.navigate(R.id.action_Home_to_Notifications);
                 break;
             case 3:
-                navController.navigate(R.id.action_to_Messaging);
+                navController.navigate(R.id.action_Home_to_Messaging);
                 break;
             case 4:
                 navController.navigate(R.id.action_Home_to_Profile);

@@ -60,8 +60,13 @@ public class LoginFragment extends Fragment {
             return;
         }
 
+
         // Convert username to email format for Firebase
         String email = username + "@gmail.com";
+
+        // TEMPORARY: Bypass Firebase for testing
+        // TODO: Re-enable Firebase authentication when ready
+        /*
 
         // TEMPORARY: Bypass Firebase for testing
         // TODO: Re-enable Firebase authentication when ready
@@ -109,5 +114,13 @@ public class LoginFragment extends Fragment {
         // Navigate to home screen
         NavController navController = Navigation.findNavController(requireActivity(), R.id.nav_host_fragment_activity_main);
         navController.navigate(R.id.action_to_Home);
+        */
+
+        // Simulate successful login
+        Toast.makeText(requireContext(), "Login successful! (Firebase bypassed)", Toast.LENGTH_SHORT).show();
+
+        // Navigate to home screen
+        NavController navController = Navigation.findNavController(requireActivity(), R.id.nav_host_fragment_activity_main);
+        navController.navigate(R.id.action_Login_to_Home);
     }
 }

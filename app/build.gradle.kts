@@ -44,6 +44,29 @@ dependencies {
     implementation(libs.navigation.fragment)
     implementation(libs.navigation.ui)
     implementation(libs.legacy.support.v4)
+
+    // Import the Firebase BoM
+    implementation(platform("com.google.firebase:firebase-bom:34.2.0"))
+
+    // Firebase Analytics (required for all Firebase products)
+    implementation("com.google.firebase:firebase-analytics")
+
+    // Firebase Authentication
+    implementation("com.google.firebase:firebase-auth")
+
+    // Firebase Firestore Database
+    implementation("com.google.firebase:firebase-firestore")
+
+    // Firebase Cloud Storage
+    implementation("com.google.firebase:firebase-storage")
+
+    // Firebase Cloud Messaging (Push Notifications)
+    implementation("com.google.firebase:firebase-messaging")
+
+
+
+
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
