@@ -59,7 +59,6 @@ public class HomeFragment extends Fragment {
         NavController navController = Navigation.findNavController(requireActivity(), R.id.nav_host_fragment_activity_main);
         switch (i) {
             case 0:
-                navController.navigate(R.id.action_Home_to_Dashboard);
                 break;
             case 1:
                 navController.navigate(R.id.toGames);

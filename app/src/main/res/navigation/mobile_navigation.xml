@@ -26,14 +26,6 @@
         android:name="com.ila.ui.home.HomeFragment"
         android:label="@string/title_home"
         tools:layout="@layout/fragment_home" />
-    <action
-        android:id="@+id/action_Home_to_Dashboard"
-        app:destination="@id/navigation_dashboard"/>
-    <fragment
-        android:id="@+id/navigation_dashboard"
-        android:name="com.ila.ui.classes.ClassesFragment"
-        android:label="@string/title_classes"
-        tools:layout="@layout/fragment_classes" />
     <fragment
         android:id="@+id/navigation_profile"
         android:name="com.ila.ui.profile.ProfileFragment"
@@ -50,9 +42,6 @@
     <action
         android:id="@+id/action_Home_to_Notifications"
         app:destination="@id/navigation_notifications"/>
-    <action
-        android:id="@+id/action_notifications_to_classes"
-        app:destination="@id/navigation_dashboard"/>
     <fragment
         android:id="@+id/navigation_Settings"
         android:name="com.ila.ui.settings.SettingsFragment"
@@ -87,26 +76,6 @@
         android:label="@string/messagingTitle"
         tools:layout="@layout/messaging_screen"/>
     <fragment
-        android:id="@+id/navigation_Lessons"
-        android:name="com.ila.ui.lessons.LessonsFragment"
-        android:label="@string/lessonsTitle"
-        tools:layout="@layout/lessons_screen"/>
-    <fragment
-        android:id="@+id/navigation_Problems"
-        android:name="com.ila.ui.problems.ProblemFragment"
-        android:label="Math Problems"
-        tools:layout="@layout/problem_screen">
-        
-        <action
-            android:id="@+id/action_Problems_to_Results"
-            app:destination="@id/navigation_Results"/>
-    </fragment>
-    <fragment
-        android:id="@+id/navigation_Results"
-        android:name="com.ila.ui.results.ResultsFragment"
-        android:label="Lesson Results"
-        tools:layout="@layout/results_screen"/>
-    <fragment
         android:id="@+id/navigation_ProgressReports"
         android:name="com.ila.ui.progress.ProgressReportsFragment"
         android:label="Progress Reports"
@@ -126,15 +95,7 @@
     <action
         android:id="@+id/action_to_Messaging"
         app:destination="@id/navigation_Messaging"/>
-    <action
-        android:id="@+id/action_to_Lessons"
-        app:destination="@id/navigation_Lessons"/>
-    <action
-        android:id="@+id/action_to_Problems"
-        app:destination="@id/navigation_Problems"/>
-    <action
-        android:id="@+id/action_to_Results"
-        app:destination="@id/navigation_Results"/>
+
     <action
         android:id="@+id/action_to_ProgressReports"
         app:destination="@id/navigation_ProgressReports"/>
