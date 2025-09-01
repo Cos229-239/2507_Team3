@@ -51,17 +51,10 @@
         android:layout_height="wrap_content"
         android:text="Select a Class"
         android:textAlignment="center"
-        android:textSize="20sp"
+        android:textSize="55dp"
+        android:textColor="#FFFF"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="39dp" />
-
-    <Button
-        android:id="@+id/button5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Back to Hallway"
-        tools:layout_gravity="bottom|center_horizontal"
-        tools:layout_marginBottom="32dp" />
 
 
 </FrameLayout>
